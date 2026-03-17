@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="canonical" href="https://bsr-studios.github.io/" />
+   
+    <title>BSR Studios</title>
+    
+    <meta name="description" content="Download premium, ultra-lightweight Windows software, AI Tools & read tech guides by BSR Studios. We build zero-lag apps optimized for low-end 2GB RAM PCs.">
+    
+    <meta name="keywords" content="BSR Studios, BSR, BSR Apps, AI Tools, tech blogs, lightweight software for pc, best apps for low end pc, windows 11 apps, indian software developer, download windows apps, bsr corporation, aryan rajput, software development, best windows utility tools, BSR official website">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0b1120;
+            --surface: #1e293b;
+            --primary: #3b82f6;
+            --primary-glow: rgba(59, 130, 246, 0.5);
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        body { background-color: var(--bg); color: var(--text-main); overflow-x: hidden; line-height: 1.6; }
+
+        /* COMPACT & STICKY NAV BAR */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 30px; 
+            background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-brand h1 { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-btn { background: rgba(59, 130, 246, 0.15); color: #60a5fa !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .nav-btn:hover { background: #3b82f6; color: white !important; }
+
+        .hero-section {
+            padding: 80px 20px 60px; text-align: center;
+            background: radial-gradient(circle at center top, rgba(59, 130, 246, 0.15), transparent 70%);
+        }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .badge {
+            display: inline-block; background: rgba(59, 130, 246, 0.1); color: var(--primary);
+            padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;
+            margin-bottom: 20px; border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        .hero-title {
+            font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .hero-desc { color: var(--text-muted); font-size: 1.1rem; line-height: 1.7; }
+
+        .content-wrapper { max-width: 1200px; margin: 0 auto; padding: 20px 20px 60px; }
+        .section-title { color: white; font-size: 1.8rem; margin-bottom: 30px; text-align: center; }
+        
+        /* Categroy Grid Layout */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px; }
+
+        .card {
+            background: var(--surface); border-radius: 24px; padding: 40px 30px; text-align: center;
+            text-decoration: none; color: white; border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        
+        /* New styling for Category Icons */
+        .card-icon {
+            width: 80px; height: 80px; border-radius: 20px; margin-bottom: 20px;
+            background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center;
+            font-size: 2.5rem; border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .card h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--text-main); }
+        .card p { color: var(--text-muted); font-size: 1rem; line-height: 1.5; }
+
+        /* AdSense Article Content Styling */
+        .article-content {
+            max-width: 900px; margin: 0 auto 60px; padding: 40px; 
+            background: rgba(30, 41, 59, 0.4); border-radius: 20px; 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .article-content h2 { color: white; font-size: 1.8rem; margin-bottom: 20px; }
+        .article-content h3 { color: #60a5fa; font-size: 1.3rem; margin-top: 25px; margin-bottom: 15px; }
+        .article-content p { color: var(--text-muted); margin-bottom: 15px; font-size: 1rem; line-height: 1.8; }
+        .article-content strong { color: var(--text-main); }
+
+        .seo-section { max-width: 900px; margin: 0 auto 60px; padding: 40px; background: rgba(15, 23, 42, 0.5); border-radius: 20px; text-align: left; }
+        .seo-section h3 { color: white; font-size: 1.5rem; margin-bottom: 15px; }
+        .seo-section p { color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem; }
+        .seo-section strong { color: var(--text-main); }
+
+        footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 60px 20px; text-align: center; background: #080c17; }
+        .footer-nav a { color: var(--text-muted); text-decoration: none; margin: 0 15px; font-size: 0.9rem; transition: color 0.3s; }
+        .footer-nav a:hover { color: var(--primary); }
+        .copyright { margin-top: 30px; color: rgba(255, 255, 255, 0.2); font-size: 0.85rem; }
+
+        @media (max-width: 600px) { 
+            .hero-title { font-size: 1.8rem; } 
+            .grid { grid-template-columns: 1fr; } 
+            nav { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="nav-brand">
+            <img src="logo.png" alt="BSR Studios Logo">
+            <h1>BSR Studios</h1>
+        </a>
+        <div class="nav-links">
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="https://github.com/BSR-Studios" target="_blank" class="nav-btn">View GitHub</a>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <span class="badge">Performance First</span>
+            <h2 class="hero-title">Software Built for Every PC.</h2>
+            <p class="hero-desc">
+                We are BSR Studios. We build high-performance software and tools designed to run smoothly on any hardware—from high-end rigs to low-end laptops with 2GB RAM. Our mission is to make technology accessible and fast for everyone.
+            </p>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <h2 class="section-title">Explore BSR Studios</h2>
+        
+        <div class="grid">
+            <a href="apps.html" class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Windows Apps</h3>
+                <p>Discover our highly optimized, zero-lag software designed specifically to run smoothly on low-end PCs.</p>
+            </a>
+            
+            <a href="Ai-Tools.html" class="card">
+                <div class="card-icon">🤖</div>
+                <h3>AI Tools</h3>
+                <p>Boost your productivity with our fast, smart, and lightweight artificial intelligence utilities.</p>
+            </a>
+
+            <a href="articles.html" class="card">
+                <div class="card-icon">📖</div>
+                <h3>Blogs & Articles</h3>
+                <p>Read our latest tech guides, PC optimization tips, and insights on modern software development.</p>
+            </a>
+        </div>
+    </main>
+
+    <article class="article-content">
+        <h2>Who We Are & What We Do</h2>
+        <p>Welcome to <strong>BSR Studios</strong>. In a world where software is becoming heavier and more demanding on hardware, we noticed a massive gap. Millions of users worldwide still rely on low-end PCs and laptops. Our primary goal is to bridge this gap by developing ultra-lightweight, highly optimized software that runs flawlessly, even on systems with just 2GB of RAM.</p>
+        
+        <h3>Our Core Philosophy</h3>
+        <p>At BSR Studios, we believe that performance should never be a luxury. Every application we design is built from the ground up with a "Performance First" mindset. We strip away unnecessary background processes and utilize efficient coding languages like C++ to ensure that our tools consume near-zero CPU and RAM resources. This means you can customize your desktop or record your screen while playing games without experiencing frame drops.</p>
+
+        <h3>Why Performance Matters</h3>
+        <p>Heavy software not only slows down your workflow but also decreases the lifespan of your hardware by causing overheating. By choosing BSR Studios' lightweight tools, you are giving your PC a breath of fresh air. We are constantly expanding our ecosystem, moving from simple utilities to advanced AI tools, all while strictly adhering to our zero-lag promise.</p>
+    </article>
+    <section class="seo-section">
+        <h3>Why Choose BSR Studios?</h3>
+        <p>
+            At <strong>BSR Studios</strong>, we solve the biggest problem for PC users: <strong>Software that slows down your computer.</strong> Most modern apps require 8GB or 16GB RAM, leaving users with older laptops behind. We are different. We specialize in creating <strong>lightweight software for low-end PCs</strong> (2GB/4GB RAM).
+        </p>
+        <p>
+            Whether you want to customize your desktop with <strong>AnyVidWall</strong> or run advanced 3D OpenGL animations with <strong>AnyWebWall</strong>, our tools are optimized to use 0% CPU while gaming. We bring premium Windows customization features for free, ensuring your system stays fast, cool, and responsive.
+        </p>
+    </section>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+        <p class="copyright">© 2026 BSR Studios. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
