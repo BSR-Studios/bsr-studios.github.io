@@ -6,13 +6,42 @@
     
     <link rel="canonical" href="https://bsr-studios.github.io/" />
    
-    <title>BSR Studios</title>
+    <title>BSR Studios - Ultra-Lightweight PC Software & AI Tools</title>
     
     <meta name="description" content="Download premium, ultra-lightweight Windows software, AI Tools & read tech guides by BSR Studios. We build zero-lag apps optimized for low-end 2GB RAM PCs.">
-    
     <meta name="keywords" content="BSR Studios, BSR, BSR Apps, AI Tools, tech blogs, lightweight software for pc, best apps for low end pc, windows 11 apps, indian software developer, download windows apps, bsr corporation, aryan rajput, software development, best windows utility tools, BSR official website">
     
-    <link rel="icon" type="image/png" href="favicon.png">
+    <meta property="og:title" content="BSR Studios - Ultra-Lightweight PC Software & AI Tools">
+    <meta property="og:description" content="We build zero-lag apps, live wallpapers, and AI tools optimized for low-end 2GB RAM PCs.">
+    <meta property="og:url" content="https://bsr-studios.github.io/">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "BSR Studios",
+          "url": "https://bsr-studios.github.io/",
+          "logo": "https://bsr-studios.github.io/logo.jpg",
+          "description": "BSR Studios develops ultra-lightweight Windows software and AI tools optimized for low-end PCs.",
+          "founder": {
+            "@type": "Person",
+            "name": "Aryan Mewada"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "name": "BSR Studios",
+          "url": "https://bsr-studios.github.io/",
+          "description": "Download ultra-lightweight Windows software & AI Tools."
+        }
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 
     <style>
@@ -39,7 +68,7 @@
         }
         .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
         .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
-        .nav-brand h1 { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        .nav-brand-text { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; } /* Changed from h1 to class for SEO */
         
         .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
@@ -67,7 +96,7 @@
         .content-wrapper { max-width: 1200px; margin: 0 auto; padding: 20px 20px 60px; }
         .section-title { color: white; font-size: 1.8rem; margin-bottom: 30px; text-align: center; }
         
-        /* Categroy Grid Layout */
+        /* Category Grid Layout */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px; }
 
         .card {
@@ -78,14 +107,13 @@
         }
         .card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
         
-        /* New styling for Category Icons */
         .card-icon {
             width: 80px; height: 80px; border-radius: 20px; margin-bottom: 20px;
             background: rgba(59, 130, 246, 0.1); display: flex; align-items: center; justify-content: center;
             font-size: 2.5rem; border: 1px solid rgba(59, 130, 246, 0.2);
         }
         
-        .card h3 { font-size: 1.5rem; margin-bottom: 12px; color: var(--text-main); }
+        .card h2 { font-size: 1.5rem; margin-bottom: 12px; color: var(--text-main); } /* Changed h3 to h2 for SEO */
         .card p { color: var(--text-muted); font-size: 1rem; line-height: 1.5; }
 
         /* AdSense Article Content Styling */
@@ -100,7 +128,7 @@
         .article-content strong { color: var(--text-main); }
 
         .seo-section { max-width: 900px; margin: 0 auto 60px; padding: 40px; background: rgba(15, 23, 42, 0.5); border-radius: 20px; text-align: left; }
-        .seo-section h3 { color: white; font-size: 1.5rem; margin-bottom: 15px; }
+        .seo-section h2 { color: white; font-size: 1.5rem; margin-bottom: 15px; }
         .seo-section p { color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem; }
         .seo-section strong { color: var(--text-main); }
 
@@ -119,47 +147,47 @@
 </head>
 <body>
 
-    <nav>
-        <a href="/" class="nav-brand">
-            <img src="logo.png" alt="BSR Studios Logo">
-            <h1>BSR Studios</h1>
+    <nav aria-label="Main Navigation">
+        <a href="/" class="nav-brand" aria-label="BSR Studios Home">
+            <img src="logo.jpg" alt="BSR Studios Logo">
+            <span class="nav-brand-text">BSR Studios</span>
         </a>
         <div class="nav-links">
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact Us</a>
-            <a href="https://github.com/BSR-Studios" target="_blank" class="nav-btn">View GitHub</a>
+            <a href="https://github.com/BSR-Studios" target="_blank" rel="noopener noreferrer" class="nav-btn">View GitHub</a>
         </div>
     </nav>
 
     <header class="hero-section">
         <div class="hero-content">
             <span class="badge">Performance First</span>
-            <h2 class="hero-title">Software Built for Every PC.</h2>
+            <h1 class="hero-title">Ultra-Lightweight Software for Every PC</h1>
             <p class="hero-desc">
-                We are BSR Studios. We build high-performance software and tools designed to run smoothly on any hardware—from high-end rigs to low-end laptops with 2GB RAM. Our mission is to make technology accessible and fast for everyone.
+                We are BSR Studios. We build high-performance Windows software, AI tools, and zero-lag utilities designed to run smoothly on any hardware—even low-end laptops with 2GB RAM.
             </p>
         </div>
     </header>
 
     <main class="content-wrapper">
-        <h2 class="section-title">Explore BSR Studios</h2>
+        <h2 class="section-title" style="display:none;">Explore BSR Studios Categories</h2>
         
         <div class="grid">
-            <a href="apps.html" class="card">
-                <div class="card-icon">🚀</div>
-                <h3>Windows Apps</h3>
+            <a href="apps.html" class="card" aria-label="Explore Windows Apps">
+                <div class="card-icon" aria-hidden="true">🚀</div>
+                <h2>Windows Apps</h2>
                 <p>Discover our highly optimized, zero-lag software designed specifically to run smoothly on low-end PCs.</p>
             </a>
             
-            <a href="Ai-Tools.html" class="card">
-                <div class="card-icon">🤖</div>
-                <h3>AI Tools</h3>
+            <a href="Ai-Tools.html" class="card" aria-label="Explore AI Tools">
+                <div class="card-icon" aria-hidden="true">🤖</div>
+                <h2>AI Tools</h2>
                 <p>Boost your productivity with our fast, smart, and lightweight artificial intelligence utilities.</p>
             </a>
 
-            <a href="articles.html" class="card">
-                <div class="card-icon">📖</div>
-                <h3>Blogs & Articles</h3>
+            <a href="articles.html" class="card" aria-label="Read Tech Blogs and Articles">
+                <div class="card-icon" aria-hidden="true">📖</div>
+                <h2>Blogs & Articles</h2>
                 <p>Read our latest tech guides, PC optimization tips, and insights on modern software development.</p>
             </a>
         </div>
@@ -176,12 +204,12 @@
         <p>Heavy software not only slows down your workflow but also decreases the lifespan of your hardware by causing overheating. By choosing BSR Studios' lightweight tools, you are giving your PC a breath of fresh air. We are constantly expanding our ecosystem, moving from simple utilities to advanced AI tools, all while strictly adhering to our zero-lag promise.</p>
     </article>
     <section class="seo-section">
-        <h3>Why Choose BSR Studios?</h3>
+        <h2>Why Choose BSR Studios?</h2>
         <p>
             At <strong>BSR Studios</strong>, we solve the biggest problem for PC users: <strong>Software that slows down your computer.</strong> Most modern apps require 8GB or 16GB RAM, leaving users with older laptops behind. We are different. We specialize in creating <strong>lightweight software for low-end PCs</strong> (2GB/4GB RAM).
         </p>
         <p>
-            Whether you want to customize your desktop with <strong>AnyVidWall</strong> or run advanced 3D OpenGL animations with <strong>AnyWebWall</strong>, our tools are optimized to use 0% CPU while gaming. We bring premium Windows customization features for free, ensuring your system stays fast, cool, and responsive.
+            Whether you want to customize your desktop with AnyVidWall or run advanced 3D OpenGL animations with AnyWebWall, our tools are optimized to use 0% CPU while gaming. We bring premium Windows customization features for free, ensuring your system stays fast, cool, and responsive.
         </p>
     </section>
 
