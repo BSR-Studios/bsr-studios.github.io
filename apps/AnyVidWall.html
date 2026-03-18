@@ -71,7 +71,7 @@
         .nav-btn { background: rgba(59, 130, 246, 0.15); color: #60a5fa !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(59, 130, 246, 0.3); }
         .nav-btn:hover { background: #3b82f6; color: white !important; }
 
-        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; text-align: center; flex: 1; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; text-align: center; flex: 1; }
         .app-header { margin-bottom: 30px; }
         .app-icon { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--surface); box-shadow: 0 0 30px rgba(59, 130, 246, 0.3); margin-bottom: 25px; }
         
@@ -95,14 +95,18 @@
         .install-guide strong { color: #60a5fa; display: block; margin-bottom: 5px; font-size: 0.95rem;}
         .install-guide b { color: white; }
 
+        /* ADSENSE THIN CONTENT FIX: Detailed Article Styling */
+        .article-content { margin-top: 40px; text-align: left; background: rgba(30, 41, 59, 0.4); padding: 40px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .article-content h2 { color: white; font-size: 1.8rem; margin-bottom: 20px; }
+        .article-content h3 { color: #3b82f6; font-size: 1.3rem; margin-top: 25px; margin-bottom: 15px; }
+        .article-content p { color: var(--text-muted); margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
+        .article-content strong { color: var(--text-main); }
+
         .features { text-align: left; margin-top: 30px; background: rgba(255,255,255,0.02); padding: 30px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); }
         .features h2 { font-size: 1.5rem; margin-bottom: 15px; color: white; }
         .features ul { list-style: none; padding-left: 0; }
         .features li { margin-bottom: 10px; color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
         .features li::before { content: "✓"; color: var(--primary); font-weight: bold; }
-
-        .seo-content { margin-top: 40px; text-align: left; color: #94a3b8; }
-        .seo-content h2 { color: white; font-size: 1.5rem; margin-bottom: 10px; }
 
         /* Added Counter Styling */
         .live-counter { font-size: 1.1rem; font-weight: 700; color: #fcd34d; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px; background: rgba(252, 211, 77, 0.1); padding: 8px 20px; border-radius: 100px; border: 1px solid rgba(252, 211, 77, 0.2); }
@@ -116,6 +120,7 @@
         @media (max-width: 768px) {
             nav { flex-direction: column; padding: 15px; gap: 15px; }
             .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
+            .article-content { padding: 25px; }
         }
     </style>
 </head>
@@ -168,24 +173,37 @@
                 </div>
             </div>
 
-            <article class="seo-content">
-                <h2>The Best Free Alternative to Wallpaper Engine</h2>
-                <p style="margin-bottom: 15px;">
-                    Looking for a <strong>live wallpaper app that doesn't lag?</strong> AnyVidWall is engineered for performance. Unlike other heavy wallpaper engines that eat up your RAM, AnyVidWall is designed specifically for <strong>Windows 7, 10, and 11 on low-spec hardware.</strong>
-                </p>
+            <article class="article-content">
+                <h2>The Ultimate Live Wallpaper Experience for Low-End PCs</h2>
                 <p>
-                    You can set any video file (MP4, MKV, AVI) as your permanent desktop background. The best part is our <strong>"Smart Gaming Mode"</strong> — the wallpaper automatically pauses when you launch full-screen games like GTA V, Valorant, or CS:GO, giving you maximum FPS without closing the app. It's the perfect solution for gamers who want a cool setup without sacrificing performance.
+                    Having a dynamic, animated desktop background is one of the best ways to customize your Windows experience. However, most users with older laptops or budget-friendly desktop computers struggle to find a solution that doesn't completely destroy their system's performance. Mainstream live wallpaper engines are notorious for eating up gigabytes of RAM and constantly utilizing the CPU, causing your entire PC to feel sluggish and unresponsive. 
+                </p>
+                
+                <h3>Why Choose AnyVidWall?</h3>
+                <p>
+                    This is exactly why we built <strong>AnyVidWall</strong>. Instead of using heavy web frameworks or bloated rendering engines, AnyVidWall utilizes a highly optimized, custom-integrated <strong>VLC Media Engine</strong> at its core. This allows the software to decode and play high-resolution video files directly on your desktop layer with extreme efficiency. Whether you have a modern gaming rig or a 10-year-old laptop with just <strong>2GB of RAM</strong>, AnyVidWall runs silently in the background without causing system hangs.
+                </p>
+
+                <h3>The Magic of "Smart Gaming Mode"</h3>
+                <p>
+                    The biggest complaint gamers have about live wallpapers is the massive drop in FPS (Frames Per Second) while playing competitive games like Valorant, CS:GO, or GTA V. AnyVidWall solves this permanently with its built-in <strong>Smart Gaming Mode</strong>. The software constantly monitors your screen state. The exact millisecond you launch a full-screen application or game, AnyVidWall <strong>automatically pauses</strong> the video rendering and releases hardware resources back to your system. When you minimize or close the game, your wallpaper seamlessly resumes playing. You get a beautiful desktop without sacrificing a single frame of gaming performance.
+                </p>
+
+                <h3>Format Support & Infinite Customization</h3>
+                <p>
+                    AnyVidWall gives you the ultimate freedom to design your workspace. You are not locked into a specific store or format. You can download any video from the internet—be it anime loops, nature timelapses, or futuristic cyber-cityscapes—and set it as your wallpaper. The engine fully supports a wide variety of formats including <strong>MP4, MKV, AVI, and WebM</strong>. It is a 100% free, ad-free, and lightweight alternative designed strictly to respect your PC's hardware.
                 </p>
             </article>
 
             <section class="features">
                 <h2>Key Features:</h2>
                 <ul>
-                    <li>Extremely Low CPU & RAM Usage</li>
-                    <li>Supports MP4, MKV, AVI and WebM formats</li>
-                    <li>Auto-Pause when gaming (Zero Lag)</li>
-                    <li>Select any video file from your PC easily</li>
-                    <li>Clean and Simple Interface</li>
+                    <li>Extremely Low CPU & RAM Usage (Optimized for 2GB RAM PCs)</li>
+                    <li>Powered by robust VLC Core Engine for smooth playback</li>
+                    <li>Supports MP4, MKV, AVI, and WebM video formats</li>
+                    <li>Auto-Pause Smart Gaming Mode (Ensures Zero FPS Lag)</li>
+                    <li>Select any local video file from your PC easily</li>
+                    <li>Clean, simple, and bloat-free user interface</li>
                 </ul>
             </section>
         </main>
