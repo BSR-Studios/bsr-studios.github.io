@@ -6,11 +6,11 @@
     
     <link rel="canonical" href="https://bsr-studios.github.io/apps/AnyVidWall.html" />
 
-    <title>AnyVidWall - Free Live Wallpaper App for Low End PC (Download)</title>
+    <title>AnyVidWall - Free Live Wallpaper App for Low End PC</title>
     
-    <meta name="description" content="Download AnyVidWall, the ultimate lightweight video live wallpaper software for Windows. Optimized for low-end 2GB RAM PCs with zero lag gaming performance.">
+    <meta name="description" content="Download AnyVidWall, a lightweight video live wallpaper software for Windows. Set any MP4, MKV, or AVI as your desktop background on low-end 2GB RAM PCs.">
     
-    <meta name="keywords" content="AnyVidWall, AnyVidWall Download, Free Video Wallpaper App, Wallpaper Engine Free Alternative, Live Wallpaper for Windows 10, Set Video as Wallpaper, Motion Desktop Background, Zero Lag Wallpaper, Gaming Mode Wallpaper, Low CPU Usage Wallpaper, Play Video on Desktop, Animated Backgrounds for Low End PC, Background Loop Player, Best Lightweight Wallpaper App, Windows 7 Live Wallpaper, video wallpaper, video wallpaper app for pc, live wallpaper app download for pc, Best Live Wallpaper App For PC, best live wallpaper app for low end pc, anyvidwall live wallpaper app, Anime live wallpaper, battery saver wallpaper, 0% cpu video wallpaper, vlc engine wallpaper, mp4 to wallpaper, mkv wallpaper, avi wallpaper, webm background, auto-pause live wallpaper, windows 11 motion background, lively wallpaper alternative, dynamic desktop video, custom video background, BSR Studios software, low specs pc customization, aesthetic pc setup, gaming pc wallpaper, animated desktop free, motion wallpaper, custom windows UI, low resource background player, hardware accelerated video wallpaper, best freeware customization, pc optimization tools, video looping software desktop, free desktop modding, BSR apps, aryan mewada developer, tech software downloads, 64-bit video wallpaper, 4k video wallpaper player, free pc software, make old pc fast">
+    <meta name="keywords" content="AnyVidWall, AnyVidWall Download, Free Video Wallpaper App, Wallpaper Engine Free Alternative, Live Wallpaper for Windows 10, Set Video as Wallpaper, Motion Desktop Background, Zero Lag Wallpaper, Low CPU Usage Wallpaper, Play Video on Desktop, Animated Backgrounds for Low End PC, Background Loop Player, Best Lightweight Wallpaper App, Windows 7 Live Wallpaper, video wallpaper, video wallpaper app for pc, live wallpaper app download for pc, Best Live Wallpaper App For PC, best live wallpaper app for low end pc, anyvidwall live wallpaper app, Anime live wallpaper, vlc engine wallpaper, mp4 to wallpaper, mkv wallpaper, avi wallpaper, BSR Studios software, low specs pc customization, aesthetic pc setup, pc optimization tools, free desktop modding, BSR apps">
     
     <meta name="author" content="BSR Studios">
     <meta name="robots" content="index, follow">
@@ -23,34 +23,11 @@
     <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/AnyVidWall.png">
     <link rel="apple-touch-icon" href="https://github.com/AryanMewada/Resources/raw/main/AnyVidWall.png">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "AnyVidWall",
-      "operatingSystem": "Windows 7, 8, 10, 11",
-      "applicationCategory": "DesktopEnhancementApplication",
-      "description": "AnyVidWall is an ultra-lightweight live video wallpaper engine designed specifically for low-end PCs. It features an auto-pause gaming mode for zero lag.",
-      "softwareVersion": "1.0",
-      "author": {
-        "@type": "Organization",
-        "name": "BSR Studios",
-        "url": "https://bsr-studios.github.io/"
-      },
-      "image": "https://github.com/AryanMewada/Resources/raw/main/AnyVidWall.png",
-      "offers": {
-        "@type": "Offer",
-        "price": "0.00",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <style>
-        :root { --bg: #0b1120; --surface: #1e293b; --primary: #3b82f6; --primary-hover: #2563eb; --text-main: #ffffff; --text-muted: #94a3b8; }
+        :root { --bg: #0b1120; --surface: #1e293b; --primary: #3b82f6; --primary-hover: #2563eb; --text-main: #ffffff; --text-muted: #94a3b8; --border: rgba(255,255,255,0.05); }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
         body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
         
@@ -58,7 +35,7 @@
             display: flex; justify-content: space-between; align-items: center; 
             padding: 10px 30px; 
             background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); 
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+            border-bottom: 1px solid var(--border); 
             position: sticky; top: 0; z-index: 1000; 
         }
         .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
@@ -71,47 +48,60 @@
         .nav-btn { background: rgba(59, 130, 246, 0.15); color: #60a5fa !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(59, 130, 246, 0.3); }
         .nav-btn:hover { background: #3b82f6; color: white !important; }
 
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; text-align: center; flex: 1; }
-        .app-header { margin-bottom: 30px; }
-        .app-icon { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--surface); box-shadow: 0 0 30px rgba(59, 130, 246, 0.3); margin-bottom: 25px; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; flex: 1; }
         
-        /* THIS REMAINS THE ONLY H1 ON THE PAGE */
-        .app-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-        
-        .app-desc { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; }
+        /* Header & Download Box */
+        .app-header { text-align: center; margin-bottom: 30px; }
+        .app-icon { width: 130px; height: 130px; border-radius: 25%; object-fit: cover; border: 2px solid var(--surface); box-shadow: 0 0 30px rgba(59, 130, 246, 0.2); margin-bottom: 20px; }
+        .app-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; color: white;}
+        .app-desc { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
 
-        .download-box { background: var(--surface); padding: 40px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05); }
-        
+        .download-box { background: var(--surface); padding: 40px; border-radius: 24px; border: 1px solid var(--border); text-align: center; margin-bottom: 50px;}
+        .live-counter { font-size: 1.1rem; font-weight: 700; color: #fcd34d; margin-bottom: 15px; display: inline-flex; align-items: center; background: rgba(252, 211, 77, 0.1); padding: 8px 20px; border-radius: 100px; border: 1px solid rgba(252, 211, 77, 0.2); }
         .btn-group { display: flex; flex-direction: column; gap: 15px; align-items: center; margin: 20px 0; }
         .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 16px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; width: 100%; max-width: 350px; box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3); }
-        .btn-download:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(59, 130, 246, 0.5); }
+        .btn-download:hover { background: var(--primary-hover); transform: translateY(-3px); }
+        .info-tag { font-size: 0.9rem; color: var(--text-muted); display: block; }
+
+        /* Software Sections Styling */
+        .section-block { background: rgba(30, 41, 59, 0.4); padding: 40px; border-radius: 24px; border: 1px solid var(--border); margin-bottom: 40px; }
+        .section-title { color: white; font-size: 1.6rem; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        .section-text { color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 15px;}
         
-        .btn-github { display: inline-flex; align-items: center; justify-content: center; background: #24292e; color: white; font-size: 1.1rem; font-weight: 600; padding: 14px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; width: 100%; max-width: 350px; border: 1px solid rgba(255,255,255,0.1); }
-        .btn-github:hover { background: #2f363d; transform: translateY(-3px); border-color: #fcd34d; }
+        /* Screenshots Grid */
+        .screenshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .screenshot-grid img { width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; cursor: pointer; }
+        .screenshot-grid img:hover { transform: scale(1.02); border-color: var(--primary); }
 
-        .info-tag { font-size: 0.9rem; color: var(--text-muted); margin-top: 5px; margin-bottom: 15px; display: block; }
+        /* Two Column Layouts */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+        
+        .spec-box { background: rgba(15, 23, 42, 0.6); padding: 20px; border-radius: 12px; border: 1px solid var(--border); }
+        .spec-box h4 { color: #60a5fa; margin-bottom: 10px; font-size: 1.1rem; }
+        .spec-box ul { list-style: none; padding: 0; color: var(--text-muted); font-size: 0.95rem; }
+        .spec-box li { margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.02); }
+        .spec-box li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
-        .install-guide { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 12px; padding: 15px; margin: 10px auto 20px; max-width: 500px; text-align: left; color: #cbd5e1; font-size: 0.9rem; line-height: 1.5; }
-        .install-guide strong { color: #60a5fa; display: block; margin-bottom: 5px; font-size: 0.95rem;}
-        .install-guide b { color: white; }
+        /* Lists & Steps */
+        .step-list { counter-reset: steps; list-style: none; padding: 0; margin-top: 20px; }
+        .step-list li { position: relative; padding-left: 45px; margin-bottom: 20px; color: var(--text-muted); font-size: 1.05rem; }
+        .step-list li::before { counter-increment: steps; content: counter(steps); position: absolute; left: 0; top: 0; width: 30px; height: 30px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; border: 1px solid rgba(59, 130, 246, 0.4); }
+        .step-list strong { color: white; }
 
-        /* ADSENSE THIN CONTENT FIX: Detailed Article Styling */
-        .article-content { margin-top: 40px; text-align: left; background: rgba(30, 41, 59, 0.4); padding: 40px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.05); }
-        .article-content h2 { color: white; font-size: 1.8rem; margin-bottom: 20px; }
-        .article-content h3 { color: #3b82f6; font-size: 1.3rem; margin-top: 25px; margin-bottom: 15px; }
-        .article-content p { color: var(--text-muted); margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
-        .article-content strong { color: var(--text-main); }
+        /* FAQ */
+        .faq-item { margin-bottom: 20px; }
+        .faq-q { color: white; font-weight: 700; font-size: 1.1rem; margin-bottom: 5px; }
+        .faq-a { color: var(--text-muted); font-size: 1rem; }
 
-        .features { text-align: left; margin-top: 30px; background: rgba(255,255,255,0.02); padding: 30px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); }
-        .features h2 { font-size: 1.5rem; margin-bottom: 15px; color: white; }
-        .features ul { list-style: none; padding-left: 0; }
-        .features li { margin-bottom: 10px; color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
-        .features li::before { content: "✓"; color: var(--primary); font-weight: bold; }
+        /* Warning/Info Boxes */
+        .alert-box { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; padding: 15px 20px; margin-top: 20px; color: #fca5a5; font-size: 0.95rem; }
+        .alert-box strong { color: #f87171; display: block; margin-bottom: 5px; font-size: 1.05rem;}
+        
+        .info-box { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 12px; padding: 15px 20px; margin-top: 20px; color: #bfdbfe; font-size: 0.95rem; }
+        .info-box strong { color: #60a5fa; display: block; margin-bottom: 5px; font-size: 1.05rem;}
 
-        /* Added Counter Styling */
-        .live-counter { font-size: 1.1rem; font-weight: 700; color: #fcd34d; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 8px; background: rgba(252, 211, 77, 0.1); padding: 8px 20px; border-radius: 100px; border: 1px solid rgba(252, 211, 77, 0.2); }
-
-        footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 50px 20px; text-align: center; margin-top: auto; background: #080c17; }
+        footer { border-top: 1px solid var(--border); padding: 50px 20px; text-align: center; margin-top: auto; background: #080c17; }
         .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 20px; }
         .footer-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
         .footer-nav a:hover { color: var(--primary); }
@@ -119,21 +109,21 @@
 
         @media (max-width: 768px) {
             nav { flex-direction: column; padding: 15px; gap: 15px; }
-            .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
-            .article-content { padding: 25px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; }
+            .section-block { padding: 25px 20px; }
         }
     </style>
 </head>
 <body>
 
     <nav aria-label="Main Navigation">
-        <a href="/" class="nav-brand" aria-label="BSR Studios Home">
+        <a href="../" class="nav-brand" aria-label="BSR Studios Home">
             <img src="../logo.jpg" alt="BSR Studios Logo">
             <span class="nav-brand-text">BSR Studios</span>
         </a>
         <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/apps.html">More Apps</a>
+            <a href="../">Home</a>
+            <a href="../apps.html">All Apps</a>
             <a href="https://github.com/BSR-Studios" target="_blank" rel="noopener noreferrer" class="nav-btn">View GitHub</a>
         </div>
     </nav>
@@ -144,70 +134,153 @@
             <img src="https://github.com/AryanMewada/Resources/raw/main/AnyVidWall.png" alt="AnyVidWall App Icon" class="app-icon">
             <h1 class="app-title">AnyVidWall</h1>
             <p class="app-desc">
-                The best free Video Wallpaper app for Windows. Optimized for performance on low-end PCs (2GB/4GB RAM). Uses advanced VLC engine for smooth playback.
+                A lightweight video live wallpaper app for Windows. Built on the VLC engine to run smoothly on low-end PCs without heavy RAM usage.
             </p>
         </header>
 
-        <main>
-            <div class="download-box">
-                <h2 style="font-size: 1.3rem; margin-bottom: 10px;">Download Latest Version</h2>
-                
-                <div style="margin: 15px auto;">
-                    <div class="live-counter" id="downloadCountDisplay">🔥 Downloads: Loading...</div>
-                </div>
-                
-                <div class="btn-group">
-                    <a href="https://github.com/AryanMewada/Resources/raw/main/AnyVidWall_Pro_Setup.exe" target="_blank" rel="noopener noreferrer" class="btn-download" onclick="incrementDownload(event)">
-                        Download Now
-                    </a>
-                    <a href="https://github.com/BSR-Studios" target="_blank" rel="noopener noreferrer" class="btn-github">
-                        ⭐ Star on GitHub
-                    </a>
-                </div>
-                
-                <span class="info-tag">Version 1.0 • Windows 7/8/10/11 • 64-bit • Free</span>
+        <div class="download-box">
+            <h2 style="font-size: 1.4rem; margin-bottom: 10px; color: white;">Download Latest Version</h2>
+            
+            <div style="margin: 15px auto;">
+                <div class="live-counter" id="downloadCountDisplay">🔥 Downloads: Loading...</div>
+            </div>
+            
+            <div class="btn-group">
+                <a href="https://github.com/AryanMewada/Resources/raw/main/AnyVidWall_Pro_Setup.exe" target="_blank" rel="noopener noreferrer" class="btn-download" onclick="incrementDownload(event)">
+                    Download for Windows
+                </a>
+            </div>
+            
+            <span class="info-tag">Version 1.0.0 • Windows 7/10/11 • Free & Safe</span>
 
-                <div class="install-guide">
-                    <strong>ℹ️ Installation Guide</strong>
-                    Since our software is new and ad-free, Windows Defender might show a blue protection screen. Don't panic! It is 100% safe. Just click on <b>'More info'</b> and then <b>'Run anyway'</b> to install the app safely.
+            <div class="info-box" style="max-width: 500px; margin: 15px auto 0; text-align: left;">
+                <strong>🛡️ Safety Statement</strong>
+                This software is 100% free of viruses, malware, and background telemetry. 
+                <br><br>
+                <i>Note: Since it is a new independent software, Windows Defender might show a blue "Windows protected your PC" screen during installation. Just click <b>'More info'</b> and then <b>'Run anyway'</b> to proceed safely.</i>
+            </div>
+        </div>
+
+        <section class="section-block">
+            <h2 class="section-title">App Overview</h2>
+            <p class="section-text">
+                AnyVidWall is a straightforward, no-nonsense utility designed for one purpose: setting video files as your desktop wallpaper without consuming all your system resources. While modern wallpaper engines are heavy and packed with unnecessary features, AnyVidWall utilizes the highly optimized <strong>VLC Media Engine</strong> to decode videos directly onto your desktop layer. It is perfect for budget laptops and older desktop PCs.
+            </p>
+            <h3 style="color: white; font-size: 1.2rem; margin: 20px 0 10px;">Core Features:</h3>
+            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-muted); font-size: 1.05rem;">
+                <li>Extremely low CPU and RAM usage.</li>
+                <li>Supports almost all video formats (MP4, MKV, AVI, WebM).</li>
+                <li>Mute/Unmute toggle for video audio.</li>
+                <li>Clean, minimalistic user interface.</li>
+                <li>System tray integration for easy management.</li>
+            </ul>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-title">Screenshots</h2>
+            <div class="screenshot-grid">
+                <img src="https://github.com/AryanMewada/Resources/raw/main/AnyVidWall/1.png" alt="AnyVidWall Interface Screenshot 1">
+                <img src="https://github.com/AryanMewada/Resources/raw/main/AnyVidWall/2.png" alt="AnyVidWall Settings Screenshot 2">
+                <img src="https://github.com/AryanMewada/Resources/raw/main/AnyVidWall/3.png" alt="AnyVidWall Desktop Preview Screenshot 3">
+            </div>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-title">System Requirements</h2>
+            <div class="two-col">
+                <div class="spec-box">
+                    <h4>Minimum Specifications</h4>
+                    <ul>
+                        <li><strong>OS:</strong> Windows 7, 10, or 11</li>
+                        <li><strong>Processor:</strong> Dual Core CPU</li>
+                        <li><strong>Memory:</strong> 2 GB RAM</li>
+                        <li><strong>Graphics:</strong> Intel HD Graphics</li>
+                    </ul>
+                </div>
+                <div class="spec-box">
+                    <h4>Recommended Specifications</h4>
+                    <ul>
+                        <li><strong>OS:</strong> Windows 10 or 11</li>
+                        <li><strong>Processor:</strong> Modern Dual/Quad Core CPU</li>
+                        <li><strong>Memory:</strong> 4 GB RAM</li>
+                        <li><strong>Graphics:</strong> Intel HD Graphics or Dedicated GPU</li>
+                    </ul>
                 </div>
             </div>
+        </section>
 
-            <article class="article-content">
-                <h2>The Ultimate Live Wallpaper Experience for Low-End PCs</h2>
-                <p>
-                    Having a dynamic, animated desktop background is one of the best ways to customize your Windows experience. However, most users with older laptops or budget-friendly desktop computers struggle to find a solution that doesn't completely destroy their system's performance. Mainstream live wallpaper engines are notorious for eating up gigabytes of RAM and constantly utilizing the CPU, causing your entire PC to feel sluggish and unresponsive. 
-                </p>
-                
-                <h3>Why Choose AnyVidWall?</h3>
-                <p>
-                    This is exactly why we built <strong>AnyVidWall</strong>. Instead of using heavy web frameworks or bloated rendering engines, AnyVidWall utilizes a highly optimized, custom-integrated <strong>VLC Media Engine</strong> at its core. This allows the software to decode and play high-resolution video files directly on your desktop layer with extreme efficiency. Whether you have a modern gaming rig or a 10-year-old laptop with just <strong>2GB of RAM</strong>, AnyVidWall runs silently in the background without causing system hangs.
-                </p>
+        <section class="section-block">
+            <h2 class="section-title">How to Use AnyVidWall</h2>
+            <ul class="step-list">
+                <li><strong>Open the App:</strong> Launch AnyVidWall to open the main dashboard.</li>
+                <li><strong>Pick a Fallback Image:</strong> Click <b>"Pick Image"</b>. This image will act as your standard wallpaper if you ever close the app. <i>(If you skip this step, your background will default to a black screen when the app is closed).</i></li>
+                <li><strong>Pick a Video:</strong> Click <b>"Pick Video"</b> and browse your computer to select the video loop you want to set as your live wallpaper.</li>
+                <li><strong>Audio Settings:</strong> If your video has background music or sound, you can toggle it using the <b>"Mute/Unmute"</b> option.</li>
+                <li><strong>Apply:</strong> Click <b>"Apply Wallpaper"</b> to instantly bring your desktop to life.</li>
+                <li><strong>System Tray Options:</strong> To change videos or settings later, look for the AnyVidWall icon in your Windows System Tray (bottom right corner). Right-click it to access options like <i>Open Dashboard, Run on Startup, About,</i> and <i>Exit</i>.</li>
+            </ul>
+        </section>
 
-                <h3>The Magic of "Smart Gaming Mode"</h3>
-                <p>
-                    The biggest complaint gamers have about live wallpapers is the massive drop in FPS (Frames Per Second) while playing competitive games like Valorant, CS:GO, or GTA V. AnyVidWall solves this permanently with its built-in <strong>Smart Gaming Mode</strong>. The software constantly monitors your screen state. The exact millisecond you launch a full-screen application or game, AnyVidWall <strong>automatically pauses</strong> the video rendering and releases hardware resources back to your system. When you minimize or close the game, your wallpaper seamlessly resumes playing. You get a beautiful desktop without sacrificing a single frame of gaming performance.
-                </p>
+        <section class="section-block">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-q">1. Can this run smoothly on a low-end PC?</div>
+                <div class="faq-a">Yes! It runs like butter (makhan) on low-end systems. However, we recommend closing or pausing the app when doing extremely heavy tasks or gaming to ensure maximum PC performance.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">2. Does it support multiple video formats?</div>
+                <div class="faq-a">Yes. Since AnyVidWall uses the VLC media engine, it supports almost any video format you throw at it (MP4, MKV, AVI, etc.). If VLC can play it, AnyVidWall can set it as a wallpaper.</div>
+            </div>
 
-                <h3>Format Support & Infinite Customization</h3>
-                <p>
-                    AnyVidWall gives you the ultimate freedom to design your workspace. You are not locked into a specific store or format. You can download any video from the internet—be it anime loops, nature timelapses, or futuristic cyber-cityscapes—and set it as your wallpaper. The engine fully supports a wide variety of formats including <strong>MP4, MKV, AVI, and WebM</strong>. It is a 100% free, ad-free, and lightweight alternative designed strictly to respect your PC's hardware.
-                </p>
-            </article>
+            <div class="faq-item">
+                <div class="faq-q">3. Can it start automatically when I turn on my PC?</div>
+                <div class="faq-a">Yes. Simply right-click the app's icon in the system tray and select the "Run on Startup" option.</div>
+            </div>
 
-            <section class="features">
-                <h2>Key Features:</h2>
-                <ul>
-                    <li>Extremely Low CPU & RAM Usage (Optimized for 2GB RAM PCs)</li>
-                    <li>Powered by robust VLC Core Engine for smooth playback</li>
-                    <li>Supports MP4, MKV, AVI, and WebM video formats</li>
-                    <li>Auto-Pause Smart Gaming Mode (Ensures Zero FPS Lag)</li>
-                    <li>Select any local video file from your PC easily</li>
-                    <li>Clean, simple, and bloat-free user interface</li>
+            <div class="faq-item">
+                <div class="faq-q">4. Can I apply interactive 3D wallpapers with this?</div>
+                <div class="faq-a">No, AnyVidWall is designed exclusively for video files. If you want interactive 3D wallpapers, please download our other software, <b>AnyWebWall</b>.</div>
+            </div>
+        </section>
+
+        <div class="two-col" style="margin-top: 0; align-items: stretch;">
+            
+            <section class="section-block" style="margin-bottom: 0;">
+                <h2 class="section-title" style="font-size: 1.4rem;">Known Limitations</h2>
+                <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+                    <li style="margin-bottom: 10px;"><strong>4K Video Lag:</strong> While the app supports 4K videos, attempting to play a 4K video wallpaper on a 2GB RAM system will cause lag. Stick to 720p or 1080p for older PCs.</li>
+                    <li><strong>Basic UI:</strong> Because it is heavily customized for maximum performance on low-end PCs, the user interface is extremely basic and lacks premium aesthetic menus.</li>
                 </ul>
+
+                <h2 class="section-title" style="font-size: 1.4rem; margin-top: 30px;">Changelog</h2>
+                <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; border: 1px solid var(--border);">
+                    <strong style="color: white;">v1.0.0 (Current Release)</strong>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">- Initial public release.<br>- VLC engine integration.<br>- Basic Video-to-Wallpaper functionality.<br><i>Note: This version does not include an auto-pause/gaming mode.</i></p>
+                </div>
             </section>
-        </main>
-        
+
+            <section class="section-block" style="margin-bottom: 0;">
+                <h2 class="section-title" style="font-size: 1.4rem; color: #fca5a5; border-color: rgba(239,68,68,0.2);">Troubleshooting</h2>
+                
+                <div class="alert-box" style="margin-top: 0;">
+                    <strong>White Screen on First Launch?</strong>
+                    When you apply a wallpaper for the very first time, the screen might turn white. To fix this, simply open the dashboard and make sure you select <b>both</b> a fallback Image AND a Video.
+                </div>
+
+                <div class="alert-box">
+                    <strong>Black Screen / Wallpaper Not Applying?</strong>
+                    If the app says it is running but your wallpaper is completely black, open your Windows Task Manager, force close AnyVidWall, and restart the application.
+                </div>
+
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 20px;">
+                    If you face any other issues, please visit our <a href="../contact.html" style="color: #60a5fa;">Contact Page</a> and send us a detailed feedback report.
+                </p>
+            </section>
+
+        </div>
+
     </div>
 
     <footer>
