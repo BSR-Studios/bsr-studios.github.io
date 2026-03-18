@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="canonical" href="https://bsr-studios.github.io/contact.html" />
+
+    <title>Contact Us | BSR Studios</title>
+    
+    <meta name="description" content="Get in touch with BSR Studios. For software support, feedback, or business inquiries regarding AnyWebWall, AnyVidWall, and Any Screen Recorder.">
+    
+    <meta name="keywords" content="Contact BSR Studios, BSR apps support, software feedback, tech support, bug report AnyWebWall, Any Screen Recorder help, contact developer, freeware support india, windows utility software contact">
+    
+    <meta name="author" content="BSR Studios">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    <meta property="og:image" content="https://bsr-studios.github.io/logo.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "BSR Studios",
+        "url": "https://bsr-studios.github.io/",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "aryanmewadastudios@gmail.com",
+          "contactType": "customer support",
+          "availableLanguage": ["English", "Hindi"]
+        }
+      }
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K88700017F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K88700017F');
+    </script>
+
+    <style>
+        :root { --bg: #0b1120; --surface: #1e293b; --primary: #3b82f6; --primary-hover: #2563eb; --text-main: #ffffff; --text-muted: #94a3b8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.8; overflow-x: hidden; display: flex; flex-direction: column; min-height: 100vh; }
+
+        /* NAV BAR */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 30px; 
+            background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-brand .nav-title { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-btn { background: rgba(59, 130, 246, 0.15); color: #60a5fa !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .nav-btn:hover { background: #3b82f6; color: white !important; }
+
+        .header-section { text-align: center; padding: 60px 20px 40px; background: radial-gradient(circle at center top, rgba(59, 130, 246, 0.1), transparent 70%); }
+        .header-section h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 15px; color: white; }
+        .header-section p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px 20px 60px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
+
+        .contact-info { background: var(--surface); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .contact-info h2 { color: white; font-size: 1.8rem; margin-bottom: 20px; border-left: 4px solid var(--primary); padding-left: 15px; }
+        .contact-info p { color: #cbd5e1; margin-bottom: 30px; font-size: 1rem; }
+        
+        .info-block { margin-bottom: 25px; }
+        .info-block h4 { color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .info-block p { color: white; font-size: 1.1rem; font-weight: 600; margin-bottom: 0; }
+        .info-block a { color: var(--primary); text-decoration: none; transition: 0.3s; }
+        .info-block a:hover { color: var(--primary-hover); text-decoration: underline; }
+
+        .contact-form { background: rgba(15, 23, 42, 0.5); border-radius: 20px; padding: 40px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; color: var(--text-muted); margin-bottom: 8px; font-size: 0.95rem; font-weight: 500; }
+        .form-group input, .form-group textarea { width: 100%; background: #0b1120; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 15px; color: white; font-family: inherit; font-size: 1rem; outline: none; transition: 0.3s; }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); }
+        .form-group textarea { resize: vertical; min-height: 150px; }
+        
+        .btn-submit { display: inline-block; background: var(--primary); color: white; border: none; padding: 15px 30px; font-size: 1.1rem; font-weight: 700; border-radius: 10px; cursor: pointer; transition: 0.3s; width: 100%; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); }
+        .btn-submit:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4); }
+
+        /* Thin Content Fix: Additional Content Section */
+        .content-section { grid-column: 1 / -1; background: rgba(30, 41, 59, 0.4); padding: 40px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05); margin-top: 20px; }
+        .content-section h3 { color: white; font-size: 1.5rem; margin-bottom: 20px; }
+        .content-section p { color: var(--text-muted); margin-bottom: 15px; font-size: 1.05rem; }
+        .content-section ul { padding-left: 20px; color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px; }
+        .content-section li { margin-bottom: 10px; }
+        .content-section strong { color: var(--primary); }
+
+        footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 20px; text-align: center; background: #080c17; margin-top: auto; }
+        .footer-links { margin-bottom: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: 0.3s; font-weight: 500; }
+        .footer-links a:hover { color: var(--primary); }
+        .copyright { color: rgba(255, 255, 255, 0.2); font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            nav { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
+            .header-section h1 { font-size: 2.2rem; }
+            .content-section { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main Navigation">
+        <a href="/" class="nav-brand" aria-label="BSR Studios Home">
+            <img src="logo.jpg" alt="BSR Studios Logo">
+            <span class="nav-title">BSR Studios</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="https://github.com/BSR-Studios" target="_blank" rel="noopener noreferrer" class="nav-btn">View GitHub</a>
+        </div>
+    </nav>
+
+    <header class="header-section">
+        <h1>Get in Touch</h1>
+        <p>Have a question about our software, found a bug, or want to suggest a new feature? We would love to hear from you.</p>
+    </header>
+
+    <main class="container">
+        
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>At BSR Studios, we are dedicated to providing the best zero-lag freeware tools. Feel free to reach out through any of the channels below.</p>
+            
+            <div class="info-block">
+                <h4>Email Support</h4>
+                <p><a href="mailto:aryanmewadastudios@gmail.com">aryanmewadastudios@gmail.com</a></p>
+            </div>
+            
+            <div class="info-block">
+                <h4>Developer Profile</h4>
+                <p><a href="https://github.com/BSR-Studios" target="_blank" rel="noopener noreferrer">github.com/BSR-Studios</a></p>
+            </div>
+            
+            <div class="info-block">
+                <h4>Location</h4>
+                <p>Bhopal, Madhya Pradesh<br>India</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                
+                <input type="hidden" name="access_key" value="65e856c5-62e9-4707-ba73-712fd2b31a2e">
+                
+                <input type="hidden" name="redirect" value="https://bsr-studios.github.io/">
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Bug report, Feature request, etc." required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="How can we help you today?" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+
+        <article class="content-section">
+            <h3>How We Can Help You</h3>
+            <p>At <strong>BSR Studios</strong>, our priority is ensuring that our users have a seamless, lag-free experience across all our desktop applications. Whether you are using Any Screen Recorder for gaming content, or AnyWebWall for your aesthetic desktop setup, we are here to support you.</p>
+            
+            <ul>
+                <li><strong>Bug Reports & Glitches:</strong> Did a software crash or an <code>.aww</code> file fail to load? Let us know. Please include your PC specifications (RAM, Processor, Windows Version) in the message box to help us diagnose the issue faster.</li>
+                <li><strong>Feature Requests:</strong> Our software evolves based on community feedback. If you want a specific feature added to AnyVidWall or need a new type of interactive wallpaper created, send us your ideas!</li>
+                <li><strong>Business Inquiries:</strong> For partnerships, software collaborations, or open-source repository queries, please use the subject line "Business Inquiry".</li>
+            </ul>
+            
+            <p><strong>Response Time:</strong> Because we are an independent development studio, our standard response time is between 24 to 48 hours. We read every single email we receive and appreciate your patience.</p>
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+        <p class="copyright">© 2026 BSR Studios. All rights reserved.</p>
+    </footer>
+</body>
+</html>
