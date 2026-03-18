@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="canonical" href="https://bsr-studios.github.io/about.html" />
+
+    <title>About Us | BSR Studios</title>
+    
+    <meta name="description" content="Learn about BSR Studios. Discover our mission to build ultra-lightweight, zero-lag PC software and live wallpapers for low-end 2GB/4GB RAM systems.">
+    
+    <meta name="keywords" content="About BSR Studios, BSR company, lightweight software company, pc optimization development, zero lag screen recorder maker, AnyWebWall developer, AnyVidWall creator, low end pc software development, tech company about us, freeware developer india, windows utility software creators, BSR apps">
+    
+    <meta name="author" content="BSR Studios">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    <meta property="og:image" content="https://bsr-studios.github.io/logo.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BSR Studios",
+      "url": "https://bsr-studios.github.io/",
+      "logo": "https://bsr-studios.github.io/logo.jpg",
+      "description": "An independent software development studio dedicated to building ultra-lightweight, zero-lag PC utilities and wallpapers for low-end systems."
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K88700017F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K88700017F');
+    </script>
+
+    <style>
+        :root { --bg: #0b1120; --surface: #1e293b; --primary: #3b82f6; --text-main: #ffffff; --text-muted: #94a3b8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.8; overflow-x: hidden; display: flex; flex-direction: column; min-height: 100vh; }
+
+        /* NAV BAR */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 30px; 
+            background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-brand img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-brand-text { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-btn { background: rgba(59, 130, 246, 0.15); color: #60a5fa !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .nav-btn:hover { background: #3b82f6; color: white !important; }
+
+        .header-section { text-align: center; padding: 80px 20px 60px; background: radial-gradient(circle at center top, rgba(59, 130, 246, 0.15), transparent 70%); }
+        .header-section h1 { font-size: 3rem; font-weight: 800; margin-bottom: 20px; color: white; }
+        .header-section p { color: var(--text-muted); font-size: 1.15rem; max-width: 650px; margin: 0 auto; line-height: 1.7; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 20px 20px 60px; flex: 1; }
+
+        .content-card { background: var(--surface); border-radius: 24px; padding: 50px; border: 1px solid rgba(255, 255, 255, 0.05); margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .content-card h2 { color: white; font-size: 1.8rem; margin-bottom: 25px; border-left: 4px solid var(--primary); padding-left: 18px; }
+        .content-card p { color: #cbd5e1; margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8; }
+        .content-card p:last-child { margin-bottom: 0; }
+        .content-card strong { color: var(--primary); }
+
+        .mission-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 35px; }
+        .mission-box { background: rgba(15, 23, 42, 0.5); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.02); transition: transform 0.3s; }
+        .mission-box:hover { transform: translateY(-5px); border-color: rgba(59, 130, 246, 0.3); }
+        .mission-box h3 { color: white; font-size: 1.3rem; margin-bottom: 12px; }
+        .mission-box p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0; line-height: 1.6; }
+
+        footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 50px 20px; text-align: center; background: #080c17; margin-top: auto; }
+        .footer-links { margin-bottom: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: 0.3s; font-weight: 500; }
+        .footer-links a:hover { color: var(--primary); }
+        .copyright { color: rgba(255, 255, 255, 0.2); font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
+            .header-section h1 { font-size: 2.4rem; }
+            .content-card { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main Navigation">
+        <a href="/" class="nav-brand" aria-label="BSR Studios Home">
+            <img src="logo.jpg" alt="BSR Studios Logo">
+            <span class="nav-brand-text">BSR Studios</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="https://github.com/BSR-Studios" target="_blank" rel="noopener noreferrer" class="nav-btn">View GitHub</a>
+        </div>
+    </nav>
+
+    <header class="header-section">
+        <h1>About Us</h1>
+        <p>Discover the story behind BSR Studios and our mission to revolutionize software development for low-end PCs.</p>
+    </header>
+
+    <main class="container">
+        
+        <article class="content-card">
+            <h2>Who We Are</h2>
+            <p>Welcome to <strong>BSR Studios</strong>. We are an independent software development studio dedicated to solving one of the most frustrating problems in the tech world: bloated, heavy software that slows down everyday computers.</p>
+            <p>In today's fast-paced digital era, most modern applications are built assuming that every user owns a high-end gaming PC with 16GB of RAM and the latest processors. This leaves millions of users with low-end or mid-range systems behind, struggling with frame drops, system crashes, and overheating issues. Our company was founded to bridge this gap. We engineer ultra-lightweight, highly optimized freeware applications designed specifically to run flawlessly on <strong>low-spec hardware (2GB to 4GB RAM systems)</strong>.</p>
+        </article>
+
+        <article class="content-card">
+            <h2>The Founder's Story</h2>
+            <p>The journey of BSR Studios began with a personal frustration. Our founder spent years gaming and working on a low-end PC. Every time he tried to record a gameplay tutorial using standard screen recorders like OBS Studio, his PC would completely freeze, dropping game FPS to unplayable levels. Similarly, trying to apply cool live wallpapers would consume 30% to 40% of the CPU, making basic multitasking impossible.</p>
+            <p>Realizing that the existing software market ignored users with older hardware, the decision was made to build custom solutions from scratch. By diving deep into <strong>C++, OpenGL, and Direct3D engines</strong>, we developed custom architectures that bypassed heavy video rendering bottlenecks. What started as personal tools to fix PC lag eventually grew into the highly optimized software suite known today as BSR Apps.</p>
+        </article>
+
+        <section class="content-card">
+            <h2>Our Core Products</h2>
+            <p>We take pride in our three flagship applications, each engineered with our signature "Zero-Lag" philosophy:</p>
+            <div class="mission-grid">
+                <div class="mission-box">
+                    <h3>Any Screen Recorder</h3>
+                    <p>The ultimate screen capture tool for low-end PCs. Utilizing a custom Direct3D and WIC engine, it drops CPU usage to just 2% to 3% while recording crystal-clear 60FPS gameplay without any watermarks.</p>
+                </div>
+                <div class="mission-box">
+                    <h3>AnyWebWall</h3>
+                    <p>A next-generation live wallpaper engine powered by C++ and OpenGL. It runs exclusive .aww format interactive 2D/3D wallpapers with an unbelievable 0% CPU usage and just 20MB of RAM footprint.</p>
+                </div>
+                <div class="mission-box">
+                    <h3>AnyVidWall</h3>
+                    <p>A lightweight video wallpaper application designed for older Windows systems. It allows users to set MP4, MKV, and AVI files as backgrounds with a smart auto-pause feature during full-screen gaming.</p>
+                </div>
+            </div>
+        </section>
+
+        <article class="content-card">
+            <h2>Our Commitment to Users</h2>
+            <p>At BSR Studios, we believe that essential software should be accessible to everyone, regardless of their hardware budget. That is why we are committed to keeping our core utility tools <strong>100% free to use</strong>.</p>
+            <p>We strongly oppose the modern industry practice of locking basic features behind paywalls or ruining user experience with intrusive watermarks and time limits. When you download a BSR application, you are getting a clean, ad-free, and studio-grade software experience designed to respect your computer's resources.</p>
+            <p>We are constantly researching and developing new ways to push the limits of low-end hardware. Thank you for being a part of our journey, and we look forward to bringing you more high-performance tools in the future.</p>
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <p class="copyright">© 2026 BSR Studios. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
