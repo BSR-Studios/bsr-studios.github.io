@@ -11,7 +11,7 @@ We build lightweight, zero-lag software tools and heavily optimized games design
 
 If you find our projects helpful, please consider giving this repository a ⭐ **Star**! It helps the studio grow.
 
-[🌐 Official Website](https://bsr-studios.github.io/) • [📥 Download Apps](https://bsr-studios.github.io/apps.html) • [🖼️ Wallpaper Gallery](https://aryanmewada.github.io/aww.html)
+[🌐 Official Website](https://bsr-studios.github.io/) • [📥 Download Apps](https://bsr-studios.github.io/apps.html) • [🖼️ Wallpaper Gallery](https://bsr-studios.github.io/aww.html)
 
 </div>
 
