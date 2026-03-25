@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saarthi AI - Free Smart Assistant by BSR Studios</title>
+    
+    <link rel="canonical" href="https://bsr-studios.github.io/saarthi-ai.html" />
+    
+    <!-- Optimized SEO Meta Tags (Safe from Keyword Stuffing) -->
+    <meta name="description" content="Chat with Saarthi AI, the smartest free AI assistant in India. Generate code, write stories in Hindi, and get instant answers with zero login required. Powered by BSR Studios.">
+    <meta name="keywords" content="saarthi ai, bsr studios ai, free chatgpt alternative, ai chatbot online, hindi ai bot, free ai assistant, ai chatbot free no login, chatgpt clone free, llama 3 chatbot online, write email ai, ai story writer hindi, aryan mewada studios, best ai for coding, ai code generator free, online ai chat without signup, smart assistant online, ask ai free">
+    <meta name="author" content="BSR Studios">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Open Graph for Facebook/WhatsApp sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bsr-studios.github.io/saarthi-ai.html">
+    <meta property="og:site_name" content="BSR Studios">
+    <meta property="og:title" content="Saarthi AI - Your Free Smart Assistant">
+    <meta property="og:description" content="Generate code, write emails, and get instant answers in Hindi or English. 100% Free AI Chatbot.">
+    <meta property="og:image" content="https://github.com/AryanMewada/Resources/raw/main/Saarthi%20AI.png">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saarthi AI - Free Smart Assistant">
+    <meta name="twitter:description" content="Get instant answers, write code, and chat in Hindi with Saarthi AI. No login required.">
+    <meta name="twitter:image" content="https://github.com/AryanMewada/Resources/raw/main/Saarthi%20AI.png">
+
+    <!-- Favicon (Your Logo) -->
+    <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/Saarthi%20AI.png">
+    <link rel="apple-touch-icon" href="https://github.com/AryanMewada/Resources/raw/main/Saarthi%20AI.png">
+
+    <!-- Schema Markup for Google Search Console -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Saarthi AI",
+      "url": "https://bsr-studios.github.io/saarthi-ai.html",
+      "operatingSystem": "All",
+      "applicationCategory": "UtilityApplication",
+      "description": "An advanced, highly intelligent virtual assistant and chatbot created by BSR Studios. Supports coding, writing, and multilingual conversations.",
+      "author": {
+        "@type": "Organization",
+        "name": "BSR Studios",
+        "url": "https://bsr-studios.github.io/"
+      },
+      "image": "https://github.com/AryanMewada/Resources/raw/main/Saarthi%20AI.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* BSR Studios Official Theme */
+        :root { 
+            --bg: #0b1120; 
+            --surface: #1e293b; 
+            --primary: #3b82f6; 
+            --primary-hover: #2563eb; 
+            --accent: #8b5cf6; 
+            --text-main: #ffffff; 
+            --text-muted: #94a3b8; 
+            --border: rgba(255,255,255,0.08); 
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        body { background-color: var(--bg); color: var(--text-main); height: 100vh; display: flex; overflow: hidden; }
+
+        /* Sidebar Design */
+        .sidebar { width: 280px; background-color: rgba(11, 17, 32, 0.95); display: flex; flex-direction: column; padding: 20px; border-right: 1px solid var(--border); transition: 0.3s; z-index: 10; flex-shrink: 0;}
+        .new-chat-btn { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--primary); border: none; color: white; padding: 14px; border-radius: 12px; cursor: pointer; font-size: 1rem; font-weight: 600; transition: 0.3s; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);}
+        .new-chat-btn:hover { background: var(--primary-hover); transform: translateY(-2px); }
+        
+        .recent-chats-title { color: var(--text-muted); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 0.5px;}
+        .history-list { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+        
+        .chat-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; background: var(--surface); border-radius: 8px; cursor: pointer; border: 1px solid transparent; transition: 0.2s; }
+        .chat-item:hover { border-color: var(--primary); }
+        .chat-title { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.9rem; color: var(--text-main); margin-right: 10px;}
+        .chat-actions { display: flex; gap: 5px; opacity: 0.6; transition: 0.2s;}
+        .chat-item:hover .chat-actions { opacity: 1; }
+        .action-btn { background: transparent; border: none; color: var(--text-muted); cursor: pointer; font-size: 1rem;}
+        .action-btn:hover { color: white; }
+
+        .sidebar-brand { margin-top: auto; padding-top: 15px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 12px; text-decoration: none;}
+        .sidebar-brand img { width: 35px; border-radius: 50%; border: 1px solid var(--border);}
+        .sidebar-brand span { font-weight: 700; font-size: 1.1rem; color: white; }
+
+        /* Main Chat Area */
+        .main-content { flex: 1; display: flex; flex-direction: column; height: 100%; position: relative;}
+        
+        .chat-container { flex: 1; overflow-y: auto; padding: 40px 20px; display: flex; flex-direction: column; gap: 30px; scroll-behavior: smooth; }
+        
+        .message-wrapper { display: flex; width: 100%; max-width: 850px; margin: 0 auto; gap: 20px;}
+        .message-wrapper.user { flex-direction: row-reverse; }
+        
+        .avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; background: var(--surface); border: 1px solid var(--border);}
+        .avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+        
+        .bubble { padding: 5px 0; font-size: 1.05rem; line-height: 1.8; white-space: pre-wrap; color: var(--text-main); width: 100%;}
+        
+        /* Welcome Screen */
+        .welcome-screen { text-align: center; max-width: 800px; margin: auto; padding: 20px; width: 100%;}
+        .welcome-screen img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 20px; border: 2px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);}
+        .welcome-screen h1 { font-size: 3rem; margin-bottom: 40px; font-weight: 800; background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+        
+        .suggestions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;}
+        .suggestion-card { background: var(--surface); border: 1px solid var(--border); padding: 20px; border-radius: 16px; cursor: pointer; transition: 0.3s;}
+        .suggestion-card:hover { border-color: var(--primary); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2);}
+        .suggestion-card h4 { font-size: 1rem; margin-bottom: 8px; color: var(--text-main);}
+        .suggestion-card p { font-size: 0.9rem; color: var(--text-muted);}
+
+        /* Input Area */
+        .input-wrapper { background: linear-gradient(180deg, rgba(11,17,32,0) 0%, rgba(11,17,32,1) 40%); padding: 20px; padding-bottom: 30px; display: flex; flex-direction: column; align-items: center;}
+        .input-box { width: 100%; max-width: 850px; display: flex; align-items: flex-end; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 12px 18px; transition: 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.3);}
+        .input-box:focus-within { border-color: var(--primary); }
+        
+        textarea { flex: 1; background: transparent; border: none; color: white; font-size: 1.05rem; resize: none; padding: 10px; max-height: 200px; min-height: 24px; outline: none; line-height: 1.6; font-family: inherit;}
+        textarea::placeholder { color: #64748b; }
+        
+        .send-btn { background: var(--primary); color: white; border: none; width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s; margin-bottom: 5px; margin-left: 15px; flex-shrink: 0;}
+        .send-btn:disabled { background: #334155; color: #64748b; cursor: not-allowed;}
+        .send-btn:hover:not(:disabled) { background: var(--primary-hover); transform: scale(1.05); }
+        .send-btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+        .footer-note { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 15px; max-width: 850px;}
+
+        /* Loader */
+        .loader { display: flex; gap: 6px; padding: 15px 0; align-items: center;}
+        .loader span { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; animation: blink 1.4s infinite both; }
+        .loader span:nth-child(2) { animation-delay: 0.2s; }
+        .loader span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes blink { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 20% { opacity: 1; transform: scale(1.2); } }
+
+        /* Code Formatting */
+        pre { background: #0f172a; padding: 15px; border-radius: 12px; overflow-x: auto; margin: 15px 0; border: 1px solid var(--border); font-family: monospace; font-size: 0.95rem; color: #e2e8f0;}
+        code { font-family: monospace; }
+
+        @media (max-width: 768px) {
+            .sidebar { position: absolute; left: -100%; height: 100%; } 
+            .suggestions-grid { grid-template-columns: 1fr; }
+            .message-wrapper { padding: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <button class="new-chat-btn" onclick="startNewChat()">
+            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            New Chat
+        </button>
+        
+        <div class="recent-chats-title">Recent Chats</div>
+        <div class="history-list" id="sidebarList">
+            <!-- Dynamically populated via JS -->
+        </div>
+        
+        <!-- Sidebar AdSense Space (Optional) -->
+        <div style="margin-top: 20px; text-align: center; border-radius: 10px; overflow: hidden;">
+            <!-- Place AdSense <ins> tag here -->
+        </div>
+
+        <a href="/" class="sidebar-brand">
+            <img src="https://github.com/AryanMewada/Resources/raw/main/Saarthi%20AI.png" alt="BSR">
+            <span>BSR Studios</span>
+        </a>
+    </aside>
+
+    <main class="main-content">
+        <div class="chat-container" id="chatBox">
+            <div class="welcome-screen" id="welcomeScreen">
+                <img src="https://github.com/AryanMewada/Resources/raw/main/Saarthi%20AI.png" alt="Saarthi AI Logo">
+                <h1>Saarthi AI</h1>
+                <div class="suggestions-grid">
+                    <div class="suggestion-card" onclick="setPrompt('Ek acchi si Hindi kahani sunao dosti ke upar')">
+                        <h4>Hindi Story</h4>
+                        <p>Write a story about friendship in Hindi</p>
+                    </div>
+                    <div class="suggestion-card" onclick="setPrompt('Write a professional email asking my boss for a 2-day sick leave.')">
+                        <h4>Write an Email</h4>
+                        <p>Ask for a 2-day sick leave</p>
+                    </div>
+                    <div class="suggestion-card" onclick="setPrompt('Write a Python script to scrape a website')">
+                        <h4>Code Generation</h4>
+                        <p>Write a Python web scraping script</p>
+                    </div>
+                    <div class="suggestion-card" onclick="setPrompt('Explain Quantum Computing to a 10 year old')">
+                        <h4>Explain Concepts</h4>
+                        <p>Simplify complex topics easily</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Chat Messages will append here -->
+        </div>
+
+        <div class="input-wrapper">
+            <div class="input-box">
+                <textarea id="userInput" placeholder="Ask Saarthi AI anything..." rows="1" oninput="autoResize(this)" onkeydown="checkEnter(event)"></textarea>
+                <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+                    <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                </button>
+            </div>
+            <div class="footer-note">
+                Saarthi AI is an independent project by BSR Studios. It may produce inaccurate information about people, places, or facts.
+                <br>
+                <!-- Place Bottom AdSense <ins> tag here safely below input -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // YAHAN APNA CLOUDFLARE WORKER URL DAALIYE
+        const API_URL = "https://saarthi-ai-backend.aryanmewadastudios.workers.dev";
+        const AI_LOGO_URL = "https://github.com/AryanMewada/Resources/raw/main/Saarthi%20AI.png";
+
+        const chatBox = document.getElementById('chatBox');
+        const userInput = document.getElementById('userInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const welcomeScreen = document.getElementById('welcomeScreen');
+        const sidebarList = document.getElementById('sidebarList');
+
+        let allChats = JSON.parse(localStorage.getItem('saarthi_all_chats')) || [];
+        let currentChatId = null; 
+        let messageHistory = [];
+
+        window.onload = () => {
+            renderSidebar();
+            showWelcomeScreen();
+        };
+
+        function renderSidebar() {
+            sidebarList.innerHTML = '';
+            if (allChats.length === 0) {
+                sidebarList.innerHTML = `<div style="color: var(--text-muted); font-size: 0.85rem; text-align: center; padding: 10px;">No recent chats</div>`;
+                return;
+            }
+
+            const reversedChats = [...allChats].reverse();
+
+            reversedChats.forEach(chat => {
+                const item = document.createElement('div');
+                item.className = 'chat-item';
+                item.onclick = () => loadChat(chat.id); 
+
+                const title = document.createElement('div');
+                title.className = 'chat-title';
+                title.innerText = chat.title || 'New Conversation';
+
+                const actions = document.createElement('div');
+                actions.className = 'chat-actions';
+                
+                const editBtn = document.createElement('button');
+                editBtn.className = 'action-btn';
+                editBtn.innerHTML = '✏️';
+                editBtn.onclick = (e) => { e.stopPropagation(); renameChat(chat.id); };
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'action-btn';
+                deleteBtn.innerHTML = '🗑️';
+                deleteBtn.onclick = (e) => { e.stopPropagation(); deleteChat(chat.id); };
+
+                actions.appendChild(editBtn);
+                actions.appendChild(deleteBtn);
+
+                item.appendChild(title);
+                item.appendChild(actions);
+                sidebarList.appendChild(item);
+            });
+        }
+
+        function saveChatsToLocal() {
+            localStorage.setItem('saarthi_all_chats', JSON.stringify(allChats));
+            renderSidebar();
+        }
+
+        function startNewChat() {
+            currentChatId = null;
+            messageHistory = [];
+            showWelcomeScreen();
+        }
+
+        function showWelcomeScreen() {
+            const messages = document.querySelectorAll('.message-wrapper');
+            messages.forEach(msg => msg.remove());
+            welcomeScreen.style.display = 'block';
+            userInput.value = '';
+            autoResize(userInput);
+        }
+
+        function loadChat(id) {
+            const chat = allChats.find(c => c.id === id);
+            if (!chat) return;
+
+            currentChatId = chat.id;
+            messageHistory = [...chat.messages];
+
+            const messages = document.querySelectorAll('.message-wrapper');
+            messages.forEach(msg => msg.remove());
+            welcomeScreen.style.display = 'none';
+
+            messageHistory.forEach(msg => {
+                if (msg.role !== "system") {
+                    appendMessage(msg.role === "user" ? "user" : "ai", msg.content, msg.role === "assistant");
+                }
+            });
+        }
+
+        function deleteChat(id) {
+            if(confirm("Are you sure you want to delete this chat?")) {
+                allChats = allChats.filter(c => c.id !== id);
+                saveChatsToLocal();
+                if (currentChatId === id) startNewChat();
+            }
+        }
+
+        function renameChat(id) {
+            const chat = allChats.find(c => c.id === id);
+            if (!chat) return;
+            const newTitle = prompt("Enter new title for this chat:", chat.title);
+            if (newTitle && newTitle.trim() !== "") {
+                chat.title = newTitle.trim();
+                saveChatsToLocal();
+            }
+        }
+
+        function autoResize(textarea) {
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
+            if(textarea.value === '') textarea.style.height = 'auto';
+        }
+
+        function setPrompt(text) {
+            userInput.value = text;
+            autoResize(userInput);
+            userInput.focus();
+        }
+
+        function checkEnter(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        }
+
+        function formatAIResponse(text) {
+            let formatted = text.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
+            formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            return formatted;
+        }
+
+        function appendMessage(sender, text, isMarkdown = false) {
+            if (welcomeScreen.style.display !== 'none') welcomeScreen.style.display = 'none';
+
+            const wrapper = document.createElement('div');
+            wrapper.className = `message-wrapper ${sender}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar';
+            
+            if (sender === 'user') {
+                avatar.innerHTML = '<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>';
+            } else {
+                avatar.innerHTML = `<img src="${AI_LOGO_URL}" alt="Saarthi AI">`;
+            }
+            
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            bubble.innerHTML = isMarkdown ? formatAIResponse(text) : text.replace(/\n/g, '<br>');
+            
+            wrapper.appendChild(avatar);
+            wrapper.appendChild(bubble);
+            chatBox.appendChild(wrapper);
+            
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function appendTypingIndicator() {
+            const wrapper = document.createElement('div');
+            wrapper.className = `message-wrapper ai`;
+            wrapper.id = "typingIndicator";
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar';
+            avatar.innerHTML = `<img src="${AI_LOGO_URL}" alt="Saarthi AI">`;
+            
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            bubble.innerHTML = `<div class="loader"><span></span><span></span><span></span></div>`;
+            
+            wrapper.appendChild(avatar);
+            wrapper.appendChild(bubble);
+            chatBox.appendChild(wrapper);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+            const indicator = document.getElementById('typingIndicator');
+            if (indicator) indicator.remove();
+        }
+
+        async function sendMessage() {
+            const text = userInput.value.trim();
+            if (!text) return;
+
+            userInput.value = '';
+            userInput.style.height = 'auto';
+            sendBtn.disabled = true;
+
+            appendMessage('user', text);
+            
+            if (!currentChatId) {
+                currentChatId = Date.now().toString(); 
+                let newTitle = text.length > 25 ? text.substring(0, 25) + '...' : text;
+                allChats.push({ id: currentChatId, title: newTitle, messages: [] });
+            }
+
+            let activeChat = allChats.find(c => c.id === currentChatId);
+            activeChat.messages.push({ role: "user", content: text });
+            messageHistory = [...activeChat.messages];
+
+            if (messageHistory.length > 12) {
+                messageHistory = messageHistory.slice(messageHistory.length - 12);
+            }
+
+            saveChatsToLocal();
+            appendTypingIndicator();
+
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ messages: messageHistory })
+                });
+
+                const data = await response.json();
+                removeTypingIndicator();
+
+                if (data.success && data.reply) {
+                    appendMessage('ai', data.reply, true);
+                    activeChat.messages.push({ role: "assistant", content: data.reply });
+                    saveChatsToLocal();
+                } else {
+                    appendMessage('ai', "⚠️ Server Error: Could not generate response.");
+                }
+            } catch (error) {
+                removeTypingIndicator();
+                appendMessage('ai', "⚠️ Network Error: Could not connect to the AI server.");
+            } finally {
+                sendBtn.disabled = false;
+                userInput.focus();
+            }
+        }
+    </script>
+</body>
+</html>
