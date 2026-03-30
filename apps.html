@@ -6,13 +6,13 @@
     
     <link rel="canonical" href="https://bsr-studios.github.io/apps.html" />
    
-    <title>Windows Apps - Zero-Lag Software by BSR Studios</title>
+    <title>Apps & Software - Zero-Lag Utilities by BSR Studios</title>
     
-    <meta name="description" content="Download ultra-lightweight, zero-lag Windows applications by BSR Studios. Featuring AnyVidWall, AnyWebWall, and Any Screen Recorder for low-end 2GB RAM PCs.">
-    <meta name="keywords" content="BSR Studios apps, AnyVidWall, AnyWebWall, Any Screen Recorder, lightweight software for pc, best apps for low end pc, windows 11 apps, zero lag screen recorder, live wallpaper engine free">
+    <meta name="description" content="Download ultra-lightweight, zero-lag Windows and Android applications by BSR Studios. Featuring AnyVidWall, Any Screen Recorder, and BSR FTP Server.">
+    <meta name="keywords" content="BSR Studios apps, AnyVidWall, AnyWebWall, Any Screen Recorder, BSR FTP Server, lightweight software for pc, best apps for low end pc, windows 11 apps, android ftp app, zero lag screen recorder">
     
-    <meta property="og:title" content="Windows Apps - Zero-Lag Software by BSR Studios">
-    <meta property="og:description" content="Explore our collection of highly optimized Windows utilities designed specifically for low-end PCs.">
+    <meta property="og:title" content="Apps & Software - Zero-Lag Utilities by BSR Studios">
+    <meta property="og:description" content="Explore our collection of highly optimized Windows and Android utilities designed for maximum performance.">
     <meta property="og:url" content="https://bsr-studios.github.io/apps.html">
     <meta property="og:type" content="website">
     
@@ -24,9 +24,9 @@
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "name": "BSR Studios Windows Apps",
+      "name": "BSR Studios Apps",
       "url": "https://bsr-studios.github.io/apps.html",
-      "description": "A collection of highly optimized, lightweight Windows applications developed by BSR Studios.",
+      "description": "A collection of highly optimized, lightweight Windows and Android applications developed by BSR Studios.",
       "publisher": {
         "@type": "Organization",
         "name": "BSR Studios",
@@ -83,8 +83,18 @@
 
         .content-wrapper { max-width: 1200px; margin: 0 auto; padding: 20px 20px 60px; }
         
+        /* Tabs Styling */
+        .tabs-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+        .tab-btn { background: rgba(255,255,255,0.05); color: var(--text-muted); border: 1px solid rgba(255,255,255,0.1); padding: 12px 30px; border-radius: 100px; font-weight: 700; cursor: pointer; transition: 0.3s; font-size: 1.05rem; display: flex; align-items: center; gap: 8px;}
+        .tab-btn.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3); }
+        .tab-btn:hover:not(.active) { background: rgba(255,255,255,0.1); color: white; }
+        
+        .tab-content { display: none; animation: fadeIn 0.4s ease; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
         /* Grid Layout */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
 
         .card {
             background: var(--surface); border-radius: 24px; padding: 40px 30px; text-align: center;
@@ -118,6 +128,7 @@
         @media (max-width: 600px) { 
             .hero-title { font-size: 2rem; } 
             .grid { grid-template-columns: 1fr; } 
+            .tabs-container { flex-direction: column; padding: 0 20px; }
         }
     </style>
 </head>
@@ -136,33 +147,64 @@
 
     <header class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title">Optimized Apps for Low-End PCs</h1>
+            <h1 class="hero-title">Optimized Apps by BSR Studios</h1>
             <p class="hero-desc">
-                Browse our collection of premium, zero-lag Windows applications. Designed with absolute precision to consume minimal RAM and CPU, ensuring a smooth experience on any hardware.
+                Browse our collection of premium, zero-lag applications. Designed with absolute precision to consume minimal resources, ensuring a smooth experience on any Windows PC or Android device.
             </p>
         </div>
     </header>
 
     <main class="content-wrapper">
         
-        <div class="grid">
-            <a href="apps/AnyVidWall.html" class="card" aria-label="Download AnyVidWall">
-                <img src="https://github.com/AryanMewada/Resources/raw/main/AnyVidWall.png" alt="AnyVidWall Logo">
-                <h2>AnyVidWall</h2>
-                <p>The ultimate lightweight live wallpaper engine. Bring your desktop to life without slowing down your PC.</p>
-            </a>
-            
-            <a href="apps/AnyWebWall.html" class="card" aria-label="Download AnyWebWall">
-                <img src="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png" alt="AnyWebWall Logo">
-                <h2>AnyWebWall</h2>
-                <p>Turn any custom 2D/3D file into a live wallpaper. Built on C++ and OpenGL for maximum performance.</p>
-            </a>
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="switchTab('windows', this)">💻 Windows Apps</button>
+            <button class="tab-btn" onclick="switchTab('android', this)">📱 Android Apps</button>
+        </div>
 
-            <a href="apps/any-screen-recorder.html" class="card" aria-label="Download Any Screen Recorder">
-                <img src="https://github.com/AryanMewada/Resources/raw/main/Any_Screen_Recorder.png" alt="Any Screen Recorder Logo">
-                <h2>Any Screen Recorder</h2>
-                <p>The ultimate zero-lag screen recording software for low-end PCs. Capture 60FPS gameplay smoothly.</p>
-            </a>
+        <div id="windows-apps" class="tab-content active">
+            <div class="grid">
+                <a href="apps/AnyVidWall.html" class="card" aria-label="Download AnyVidWall">
+                    <img src="https://github.com/AryanMewada/Resources/raw/main/AnyVidWall.png" alt="AnyVidWall Logo">
+                    <h2>AnyVidWall</h2>
+                    <p>The ultimate lightweight live wallpaper engine. Bring your desktop to life without slowing down your PC.</p>
+                </a>
+                
+                <a href="apps/AnyWebWall.html" class="card" aria-label="Download AnyWebWall">
+                    <img src="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png" alt="AnyWebWall Logo">
+                    <h2>AnyWebWall</h2>
+                    <p>Turn any custom 2D/3D file into a live wallpaper. Built on C++ and OpenGL for maximum performance.</p>
+                </a>
+
+                <a href="apps/any-screen-recorder.html" class="card" aria-label="Download Any Screen Recorder">
+                    <img src="https://github.com/AryanMewada/Resources/raw/main/Any_Screen_Recorder.png" alt="Any Screen Recorder Logo">
+                    <h2>Any Screen Recorder</h2>
+                    <p>The ultimate zero-lag screen recording software for low-end PCs. Capture 60FPS gameplay smoothly.</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="android-apps" class="tab-content">
+            <div class="grid">
+                <a href="apps/wifi-file-transfer.html" class="card" aria-label="Download BSR FTP Server">
+                    <img src="https://github.com/AryanMewada/Resources/raw/main/BSR%20FTP%20Server.png" alt="BSR FTP Server Logo">
+                    <h2>BSR FTP Server</h2>
+                    <p>Turn your Android device into a local FTP server and manage your internal storage wirelessly from your PC.</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 20px auto 50px; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
 
         <article class="article-section">
@@ -182,6 +224,11 @@
                 <p>Content creation shouldn't be limited to expensive hardware. <strong>Any Screen Recorder</strong> is engineered to capture high-quality, 60FPS gameplay and desktop footage on low-end systems. By optimizing rendering paths and minimizing CPU overhead, it allows you to record your gaming sessions without the stuttering and lag associated with mainstream recording software. It is the perfect tool for aspiring gamers and tutorial creators.</p>
             </div>
 
+            <div class="article-block">
+                <h3>📱 Wireless Transfers with BSR FTP Server</h3>
+                <p>Tired of finding a USB cable every time you want to copy a file from your phone to your PC? <strong>BSR FTP Server</strong> solves this by turning your Android phone into a high-speed local server. Connect to the same WiFi network, start the app, and instantly manage all your mobile files and folders directly from your Windows File Explorer. Fast, secure, and completely free.</p>
+            </div>
+
         </article>
 
     </main>
@@ -199,5 +246,22 @@
         <p class="copyright">© 2026 BSR Studios. All rights reserved.</p>
     </footer>
 
+    <script>
+        function switchTab(tabId, element) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected content
+            document.getElementById(tabId + '-apps').classList.add('active');
+            // Add active class to clicked button
+            element.classList.add('active');
+        }
+    </script>
 </body>
 </html>
