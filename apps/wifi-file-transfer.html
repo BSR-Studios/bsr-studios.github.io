@@ -9,7 +9,7 @@
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Download BSR FTP Server to transfer files between your Android mobile and PC without a USB cable. Manage your phone's internal storage directly from Windows File Explorer.">
-<!-- BSR FTP Server: 80 Targeted SEO Keywords -->
+    <!-- BSR FTP Server: 80 Targeted SEO Keywords -->
     <meta name="keywords" content="bsr ftp server, bsr ftp app, bsr studios ftp, bsr wifi file transfer, bsr ftp server apk, bsr ftp android, download bsr ftp server, bsr ftp pc connect, bsr ftp software, bsr studios ftp app, how to transfer files from android to pc via wifi, how to use ftp server on android, how to connect phone to pc without cable, how to access android storage on pc, how to transfer files without usb, how to share files over wifi, how to connect ftp android to windows, how to transfer large files pc to mobile, how to open android files on windows 10, how to use mobile as ftp server, how to move photos from phone to pc wirelessly, how to share data from mobile to laptop without cable, how to setup ftp on android phone, how to transfer files between phone and pc via hotspot, how to access internal storage via ftp, how to use windows file explorer for android, how to send files over local network, how to copy paste files android to pc wifi, how to manage phone files on pc, how to backup phone data to pc wirelessly, wifi file transfer, ftp server android, wireless file manager, pc to mobile file transfer, android to pc file sharing, wifi ftp app, local network file transfer, share files without internet, hotspot file transfer, wireless file transfer windows, send files to pc, android ftp client, free ftp server app, wifi file sharing apk, transfer photos to pc without cable, wireless data cable app, wlan file transfer, network drive android, ftp url file explorer, no usb file transfer, file transfer protocol android, fast wifi file transfer, local ftp server, mobile file manager pc, access phone files remotely, browser file transfer android, windows 11 mobile file transfer, android local server, ftp 192.168, transfer videos to pc wirelessly, phone to laptop file sender, wireless usb alternative, wifi direct pc to mobile, local area network file share, offline file transfer app, secure ftp android, background ftp server android, ftp port 2221, connect phone to windows 10 wirelessly, transfer music to phone wifi, wireless sd card access, mobile storage on pc, network folder android, ftp over hotspot, zero data file transfer, computer to phone file transfer, android wireless drive, ftp file manager, easy ftp server, best wifi file transfer app">
     <meta name="author" content="BSR Studios">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -30,7 +30,6 @@
 
     <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/BSR%20FTP%20Server.png">
     <link rel="apple-touch-icon" href="https://github.com/AryanMewada/Resources/raw/main/BSR%20FTP%20Server.png">
-
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -87,8 +86,12 @@
         .hero-icon { width: 120px; height: 120px; border-radius: 24px; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3); flex-shrink: 0;}
         .hero-content h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 15px; color: white;}
         .hero-content p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 25px; line-height: 1.6;}
+        
+        /* Download Button & Counter Container */
+        .download-container { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
         .btn-download { display: inline-flex; align-items: center; gap: 10px; background: var(--primary); color: white; padding: 14px 30px; border-radius: 12px; font-weight: 700; text-decoration: none; transition: 0.3s; font-size: 1.05rem;}
         .btn-download:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);}
+        .live-counter { font-size: 0.95rem; color: var(--accent); font-weight: 700; display: flex; align-items: center; gap: 6px; }
 
         /* Section Global Styles */
         .section-block { margin-bottom: 50px; background: rgba(30, 41, 59, 0.3); border: 1px solid var(--border); border-radius: 20px; padding: 40px;}
@@ -96,13 +99,8 @@
         
         /* Fixed Screenshots Grid */
         .screenshot-grid { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; align-items: center;}
-        
-        /* Mobile Screenshot Format (Tall) */
         .screenshot-grid img.mobile-img { height: 400px; width: auto; border-radius: 16px; border: 2px solid var(--border); box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: 0.3s; flex-shrink: 0; background: var(--surface); }
-        
-        /* PC Screenshot Format (Wide) */
         .screenshot-grid img.pc-img { height: 230px; width: auto; border-radius: 12px; border: 2px solid var(--border); box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: 0.3s; flex-shrink: 0; background: var(--surface); }
-        
         .screenshot-grid img:hover { transform: scale(1.03); border-color: var(--primary);}
 
         /* How to Use List */
@@ -117,7 +115,7 @@
         .faq-q { color: white; font-weight: 700; font-size: 1.15rem; margin-bottom: 8px; }
         .faq-a { color: var(--text-muted); font-size: 1.05rem; line-height: 1.6;}
 
-        /* Split Columns for Limitations & Changelog */
+        /* Split Columns */
         .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 50px;}
         .split-box { background: var(--surface); border: 1px solid var(--border); padding: 30px; border-radius: 20px; }
         .split-box h3 { color: white; font-size: 1.4rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border);}
@@ -134,6 +132,7 @@
         @media (max-width: 768px) {
             nav { flex-direction: column; padding: 15px; gap: 15px; }
             .hero { flex-direction: column; text-align: center; gap: 20px; padding: 30px 20px;}
+            .download-container { align-items: center; }
             .split-grid { grid-template-columns: 1fr; }
             .screenshot-grid img.mobile-img { height: 300px; }
             .screenshot-grid img.pc-img { height: 180px; }
@@ -144,10 +143,9 @@
 
     <nav aria-label="Main Navigation">
         <a href="/" class="nav-brand" aria-label="BSR Studios Home">
-            <img src="logo.png" alt="BSR Studios Logo">
+            <img src="/logo.png" alt="BSR Studios Logo" onerror="this.src='fallback-logo.png'">
             <span class="nav-title">BSR Studios</span>
         </a>
- 
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="../apps.html">All Apps</a>
@@ -163,10 +161,20 @@
             <div class="hero-content">
                 <h1>BSR FTP Server</h1>
                 <p>Say goodbye to broken USB cables. Turn your Android device into a local FTP server and manage your internal storage directly from your PC's File Explorer.</p>
-                <a href="https://github.com/AryanMewada/Resources/raw/main/BSR%20FTP%20Server/BSR%20FTP%20Server.apk" class="btn-download">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                    Download APK Free
-                </a>
+                
+                <!-- NEW: Download Button & Tracker UI -->
+                <div class="download-container">
+                    <!-- IMPORTANT: Yahan apne Cloudflare Worker ka URL daalna (/download ke sath) -->
+                    <a href="https://bsr-download-tracker.aryanmewadastudios.workers.dev/download" class="btn-download" target="_blank">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Download APK Free
+                    </a>
+                    <div class="live-counter">
+                        <span style="animation: pulse 1.5s infinite;">🔥</span> 
+                        <span id="downloadText">Fetching downloads...</span>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -185,7 +193,7 @@
             </script>
         </div>
 
-        <!-- Screenshots Section (FIXED FOR PC & MOBILE) -->
+        <!-- Screenshots Section -->
         <section class="section-block">
             <h2 class="section-title">App Screenshots & Guide</h2>
             <div class="screenshot-grid">
@@ -193,7 +201,6 @@
                 <img class="mobile-img" src="https://github.com/AryanMewada/Resources/raw/main/BSR%20FTP%20Server/Screenshot_2026-03-30-13-26-50-53_a2f4d629ac57f7186668859c7a682283.jpg" alt="App Home Screen">
                 <img class="mobile-img" src="https://github.com/AryanMewada/Resources/raw/main/BSR%20FTP%20Server/Screenshot_2026-03-30-13-27-03-43_a2f4d629ac57f7186668859c7a682283.jpg" alt="Server Started View">
                 <img class="mobile-img" src="https://github.com/AryanMewada/Resources/raw/main/BSR%20FTP%20Server/Screenshot_2026-03-30-13-27-08-98_a2f4d629ac57f7186668859c7a682283.jpg" alt="FTP Service Active">
-                
                 <!-- PC Screenshots -->
                 <img class="pc-img" src="https://github.com/AryanMewada/Resources/raw/main/BSR%20FTP%20Server/file%20explorer.png" alt="PC File Explorer View">
                 <img class="pc-img" src="https://github.com/AryanMewada/Resources/raw/main/BSR%20FTP%20Server/url.png" alt="FTP URL in Browser">
@@ -231,17 +238,14 @@
         <!-- FAQ Section -->
         <section class="section-block">
             <h2 class="section-title">Frequently Asked Questions</h2>
-            
             <div class="faq-item">
                 <div class="faq-q">Does this consume my mobile internet data?</div>
                 <div class="faq-a">No! The transfer happens completely locally over the WiFi router or Hotspot signal. It does not use your active internet data plan.</div>
             </div>
-
             <div class="faq-item">
                 <div class="faq-q">Is this secure? Can anyone access my files?</div>
                 <div class="faq-a">The FTP server is only active when you tap 'Start', and it can only be accessed by devices connected to your exact same WiFi network. Once you click 'Stop', access is completely disabled.</div>
             </div>
-
             <div class="faq-item">
                 <div class="faq-q">Does this work on Mac or Linux?</div>
                 <div class="faq-a">Yes. FTP is a universal protocol. On Mac, you can press Cmd+K in Finder and enter the FTP URL. On Linux, you can enter it in your default file manager's network tab.</div>
@@ -258,7 +262,6 @@
                     <li>The app must remain open in the background to keep the FTP server alive during large file transfers.</li>
                 </ul>
             </div>
-            
             <div class="split-box">
                 <h3>🔄 Changelog (v1.0.0)</h3>
                 <ul>
@@ -285,5 +288,27 @@
         <p class="copyright">© 2026 BSR Studios. All rights reserved. Built for absolute performance.</p>
     </footer>
 
+    <!-- NEW: JavaScript to Fetch Download Count -->
+<script>
+    // Exact URL without trailing slash
+    const TRACKER_API = "https://bsr-download-tracker.aryanmewadastudios.workers.dev";
+
+    async function fetchDownloadCount() {
+        const countDisplay = document.getElementById('downloadText');
+        try {
+            const response = await fetch(`${TRACKER_API}/count`);
+            const data = await response.json();
+            
+            const formattedCount = data.count.toLocaleString('en-US');
+            countDisplay.innerText = `${formattedCount}+ Downloads`;
+            
+        } catch (error) {
+            console.error("Tracker API Error:", error);
+            countDisplay.innerText = "Trusted by many users";
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', fetchDownloadCount);
+</script>
 </body>
 </html>
