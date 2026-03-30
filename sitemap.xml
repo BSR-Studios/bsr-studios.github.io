@@ -104,6 +104,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+    <url>
+    <loc>https://bsr-studios.github.io/articles/blog-wifi-file-transfer.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://bsr-studios.github.io/articles/blog-video-wallpaper.html</loc>
     <lastmod>2026-03-20</lastmod>
