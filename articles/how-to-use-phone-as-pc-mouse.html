@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="canonical" href="https://bsr-studios.github.io/articles/how-to-use-phone-as-pc-mouse.html" />
+
+    <title>How to Turn Your Android Phone into a Wireless PC Mouse | BSR Studios</title>
+    
+    <meta name="description" content="Learn how to easily convert your Android smartphone into a zero-lag wireless mouse and touchpad for your Windows PC using the free Phone Pad app.">
+    
+    <meta name="keywords" content="how to use phone as pc mouse, android wifi mouse, turn phone into touchpad, control pc from bed with phone, wireless mouse app for windows, phone pad app setup, remote mouse android to pc, zero lag wifi mouse, use phone screen as trackpad, broken mouse alternative, bsr studios apps, windows 10 remote control, pc remote app free">
+    
+    <meta name="author" content="BSR Studios">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to Turn Your Android Phone into a Wireless PC Mouse">
+    <meta property="og:description" content="Broken mouse? Or just want to control your PC from your bed? Learn how to set up a zero-lag wireless touchpad in 2 minutes.">
+    <meta property="og:image" content="https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Phone%20Pad.png">
+    
+    <link rel="icon" type="image/png" href="../logo.jpg">
+    <link rel="apple-touch-icon" href="../logo.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://bsr-studios.github.io/articles/how-to-use-phone-as-pc-mouse.html"
+      },
+      "headline": "How to Turn Your Android Phone into a Wireless PC Mouse",
+      "description": "A comprehensive step-by-step guide on setting up the Phone Pad application to use an Android device as a Windows PC trackpad over local Wi-Fi.",
+      "image": "https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Phone%20Pad.png",  
+      "author": {
+        "@type": "Organization",
+        "name": "BSR Studios",
+        "url": "https://bsr-studios.github.io/"
+      },  
+      "publisher": {
+        "@type": "Organization",
+        "name": "BSR Studios",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://bsr-studios.github.io/logo.png"
+        }
+      },
+      "datePublished": "2026-04-05",
+      "dateModified": "2026-04-05"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --bg: #0b1120; --surface: #1e293b; --primary: #f97316; --primary-hover: #ea580c; --accent: #fcd34d; --text-main: #ffffff; --text-muted: #94a3b8; --text-article: #cbd5e1; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.8; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+
+        /* Navbar */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); position: sticky; top: 0; z-index: 1000; }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-brand img { height: 32px; width: 32px; border-radius: 8px; object-fit: cover; }
+        .nav-brand-text { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-btn { background: rgba(249, 115, 22, 0.15); color: #fdba74 !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(249, 115, 22, 0.3); }
+        .nav-btn:hover { background: var(--primary); color: white !important; }
+
+        /* Article Layout */
+        .blog-container { max-width: 800px; margin: 40px auto; padding: 0 20px; flex: 1; }
+        
+        .blog-header { text-align: center; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .category-tag { background: rgba(249, 115, 22, 0.15); color: #fdba74; padding: 6px 16px; border-radius: 100px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 20px; }
+        .blog-title { font-size: 2.8rem; font-weight: 800; color: white; margin-bottom: 20px; line-height: 1.2; }
+        .blog-meta { color: var(--text-muted); font-size: 0.95rem; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        .author-avatar { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
+
+        .toc-box { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.05); padding: 25px; border-radius: 16px; margin-bottom: 40px; }
+        .toc-box h3 { color: white; margin-bottom: 15px; font-size: 1.2rem; }
+        .toc-box ul { list-style: none; }
+        .toc-box li { margin-bottom: 10px; }
+        .toc-box a { color: var(--primary); text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .toc-box a:hover { color: #fdba74; text-decoration: underline; }
+
+        .article-body { font-size: 1.1rem; color: var(--text-article); }
+        .article-body h2 { color: white; font-size: 1.8rem; margin: 40px 0 20px; font-weight: 800; border-left: 4px solid var(--primary); padding-left: 15px; }
+        .article-body h3 { color: #e2e8f0; font-size: 1.4rem; margin: 30px 0 15px; font-weight: 700; }
+        .article-body p { margin-bottom: 25px; }
+        .article-body strong { color: white; font-weight: 700; }
+        .article-body ul, .article-body ol { margin-bottom: 25px; padding-left: 20px; }
+        .article-body li { margin-bottom: 12px; }
+        
+        .highlight-box { background: rgba(249, 115, 22, 0.05); border: 1px solid rgba(249, 115, 22, 0.2); padding: 20px; border-radius: 12px; margin: 30px 0; border-left: 4px solid var(--primary); }
+        .highlight-box h4 { color: #fdba74; margin-bottom: 10px; font-size: 1.1rem; }
+        .highlight-box p { margin-bottom: 0; font-size: 1rem; }
+
+        /* Download Buttons inside Article */
+        .download-actions { display: flex; flex-wrap: wrap; gap: 15px; margin: 30px 0; }
+        .dl-btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 25px; border-radius: 8px; font-weight: 700; text-decoration: none; transition: 0.3s; font-size: 1.05rem; }
+        .dl-apk { background: var(--primary); color: white; box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3); }
+        .dl-apk:hover { background: var(--primary-hover); transform: translateY(-2px); }
+        .dl-pc { background: #1e293b; color: white; border: 1px solid rgba(255,255,255,0.1); }
+        .dl-pc:hover { background: #334155; transform: translateY(-2px); border-color: rgba(255,255,255,0.3); }
+
+        footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 50px 20px; text-align: center; margin-top: auto; background: #080c17; }
+        .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 20px; }
+        .footer-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .footer-nav a:hover { color: var(--primary); }
+        .copyright { color: rgba(255, 255, 255, 0.2); font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; }
+            .blog-title { font-size: 2.2rem; }
+            .article-body { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main Navigation">
+        <a href="../" class="nav-brand" aria-label="BSR Studios Home">
+            <img src="../logo.jpg" alt="BSR Studios Logo" onerror="this.src='fallback-logo.png'">
+            <span class="nav-brand-text">BSR Studios</span>
+        </a>
+        <div class="nav-links">
+            <a href="../">Home</a>
+            <a href="../apps.html">All Apps</a>
+            <a href="../apps/Phone-Ped.html" class="nav-btn" style="color: white !important;">Get Phone Pad</a>
+        </div>
+    </nav>
+
+    <main class="blog-container">
+        
+        <header class="blog-header">
+            <span class="category-tag">Tutorials & Utilities</span>
+            <h1 class="blog-title">How to Turn Your Android Phone into a Wireless PC Mouse</h1>
+            <div class="blog-meta">
+                <img src="../logo.jpg" alt="Author" class="author-avatar" onerror="this.src='fallback-logo.png'">
+                <span>By <strong>BSR Studios</strong></span>
+                <span>•</span>
+                <span>April 05, 2026</span>
+                <span>•</span>
+                <span>4 Min Read</span>
+            </div>
+        </header>
+
+        <div class="toc-box">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#the-problem">1. The Broken Mouse Dilemma</a></li>
+                <li><a href="#the-solution">2. Enter Phone Pad: The Zero-Lag Solution</a></li>
+                <li><a href="#downloads">3. Download the Required Files</a></li>
+                <li><a href="#step-by-step">4. Step-by-Step Setup Guide</a></li>
+                <li><a href="#troubleshooting">5. Troubleshooting Firewall Issues</a></li>
+            </ul>
+        </div>
+
+        <article class="article-body">
+            <p>Imagine this: It is late at night, you are comfortably tucked into bed watching a movie on your PC monitor across the room. Suddenly, the "Are you still watching?" prompt appears on the screen. Now you have to get out of your warm bed just to click a button. Or even worse—you are in the middle of an important project and your physical computer mouse decides to stop working completely.</p>
+            
+            <p>Instead of panicking or buying an expensive wireless keyboard with a trackpad, you can actually use the device you are already holding in your hand. Today, we will show you how to turn your Android smartphone into a highly responsive, wireless touchpad for your Windows PC.</p>
+
+            <h2 id="the-problem">1. The Problem with Bluetooth Mouse Apps</h2>
+            <p>If you search the Google Play Store for "PC Mouse", you will find hundreds of apps. However, most of them rely on Bluetooth connections. Bluetooth is notorious for having a low bandwidth and high latency. This results in a laggy, jittery cursor that skips across your screen and makes clicking small icons incredibly frustrating.</p>
+
+            <h2 id="the-solution">2. Enter Phone Pad: The Zero-Lag Solution</h2>
+            <p>To solve the latency issue, we at <strong>BSR Studios</strong> developed the <a href="../apps/Phone-Ped.html">Phone Pad</a> system. Instead of using slow Bluetooth, Phone Pad uses your local Wi-Fi router (WLAN) to transmit touch data. Because Wi-Fi can transfer massive amounts of data in milliseconds, the cursor movement on your PC feels instantaneous and buttery smooth, just like a physical laptop trackpad.</p>
+            
+            <p>It also fully supports multi-touch gestures. You can tap with one finger to left-click, tap with two fingers to right-click, and drag two fingers to scroll through web pages.</p>
+
+            <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 40px auto; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+                <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1032421976701438"
+                     data-ad-slot="5645597669"
+                     data-ad-format="horizontal"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <h2 id="downloads">3. Download the Required Files</h2>
+            <p>Because your phone and PC need to talk to each other, this system requires two lightweight files: an App for your phone, and a Receiver Server for your PC.</p>
+
+            <div class="download-actions">
+                <a href="https://bsr-download-tracker.aryanmewadastudios.workers.dev/download/phonepad_apk" class="dl-btn dl-apk" target="_blank">📱 Download Android App</a>
+                <a href="https://bsr-download-tracker.aryanmewadastudios.workers.dev/download/phonepad_server" class="dl-btn dl-pc" target="_blank">💻 Download PC Receiver</a>
+            </div>
+
+            <h2 id="step-by-step">4. Step-by-Step Setup Guide</h2>
+            <p>Once you have downloaded both files, follow these quick steps to establish the connection:</p>
+
+            <ol>
+                <li><strong>Connect to the Same Network:</strong> This is the most crucial step. Ensure that your Android phone and your Windows PC are connected to the exact same Wi-Fi router. (If you don't have Wi-Fi, you can turn on your phone's Mobile Hotspot and connect your PC to it).</li>
+                <li><strong>Run the PC Server:</strong> Open the <code>PhonePad_Server.exe</code> file on your Windows computer. It will display a small window showing your local IP address (for example: <code>192.168.1.5</code>).</li>
+                <li><strong>Open the Mobile App:</strong> Open the Phone Pad app on your Android device.</li>
+                <li><strong>Enter the IP and Connect:</strong> Type the exact IP address shown on your PC screen into the mobile app and press the <strong>Connect</strong> button.</li>
+            </ol>
+
+            <div class="highlight-box">
+                <h4>🎉 You're Connected!</h4>
+                <p>The mobile app will instantly transition into a large, dark trackpad. Slide your thumb across your phone screen and watch your PC mouse cursor move in real-time!</p>
+            </div>
+
+            <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 40px auto; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+                <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1032421976701438"
+                     data-ad-slot="5645597669"
+                     data-ad-format="horizontal"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <h2 id="troubleshooting">5. Troubleshooting Firewall Issues</h2>
+            <p>If you followed the steps but the app refuses to connect, there is a 99% chance that Windows Defender Firewall is blocking the local server.</p>
+            
+            <p>When you run the PC Server for the very first time, Windows will show a "Windows Security Alert" popup. You must check the box that says <strong>"Private networks"</strong> and click <strong>"Allow access"</strong>. If you accidentally closed this popup, your PC will actively block the signals coming from your phone.</p>
+            
+            <p>To fix this manually, open your Windows Start Menu, search for <em>"Allow an app through Windows Firewall"</em>, find the Phone Pad Server in the list, and make sure the checkboxes next to it are ticked.</p>
+
+            <p>That is it! You have successfully upgraded your mobile device into a powerful utility tool. Enjoy controlling your computer from anywhere in the room.</p>
+
+        </article>
+
+        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 0 auto 40px; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="../about.html">About Us</a>
+            <a href="../contact.html">Contact Us</a>
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <a href="../terms.html">Terms & Conditions</a>
+            <a href="../disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="copyright">© 2026 BSR Studios. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
