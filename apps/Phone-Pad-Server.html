@@ -1,1 +1,355 @@
-Hello Brother
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="canonical" href="https://bsr-studios.github.io/apps/Phone-Pad-Server.html" />
+
+    <title>Phone Pad PC Server - Windows Receiver for Wireless Mouse | BSR Studios</title>
+    
+    <meta name="description" content="Download the official Phone Pad PC Server for Windows. The essential, lightweight background bridge that receives wireless mouse inputs from your Android phone.">
+    
+    <meta name="keywords" content="Phone Pad server, pc receiver for wifi mouse, wireless mouse server windows, bsr phone pad pc download, local wifi bridge, lightweight trackpad server, android to pc connector, windows 10 remote mouse server, windows 11 trackpad receiver, zero lag wifi server pc, remote control pc client, BSR studios pc server, phone pad windows setup, utility software for windows, phone to pc mouse bridge">
+    
+    <meta name="author" content="BSR Studios">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="software">
+    <meta property="og:title" content="Phone Pad PC Server - Windows Receiver">
+    <meta property="og:description" content="The lightweight Windows companion app that bridges your Android phone to your PC's cursor.">
+    <meta property="og:url" content="https://bsr-studios.github.io/apps/Phone-Pad-Server.html">
+    <meta property="og:image" content="https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Phone%20Pad.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://bsr-studios.github.io/apps/Phone-Pad-Server.html">
+    <meta name="twitter:title" content="Phone Pad PC Server - Windows Receiver">
+    <meta name="twitter:description" content="The lightweight Windows companion app that bridges your Android phone to your PC's cursor.">
+    <meta name="twitter:image" content="https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Phone%20Pad.png">
+
+    <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Phone%20Pad.png">
+    <link rel="apple-touch-icon" href="https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Phone%20Pad.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Phone Pad PC Server",
+      "url": "https://bsr-studios.github.io/apps/Phone-Pad-Server.html",
+      "operatingSystem": "Windows 7, 10, 11",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "The official Windows server application for Phone Pad. It runs silently in the background, receiving local Wi-Fi signals from your Android device and translating them into precise Windows cursor movements.",
+      "softwareVersion": "1.0.0",
+      "author": {
+        "@type": "Organization",
+        "name": "BSR Studios",
+        "url": "https://bsr-studios.github.io/"
+      },
+      "image": "https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Phone%20Pad.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Utility Orange Theme */
+        :root { --bg: #0b1120; --surface: #1e293b; --primary: #f97316; --primary-hover: #ea580c; --accent: #fcd34d; --text-main: #ffffff; --text-muted: #94a3b8; --border: rgba(255,255,255,0.05); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+        
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 30px; 
+            background: rgba(11, 17, 32, 0.95); backdrop-filter: blur(12px); 
+            border-bottom: 1px solid var(--border); 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; }
+        .nav-brand img { height: 32px; width: 32px; border-radius: 8px; object-fit: cover; }
+        .nav-brand-text { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.5px; }
+        
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .nav-btn { background: rgba(249, 115, 22, 0.15); color: #fdba74 !important; padding: 6px 16px; border-radius: 100px; border: 1px solid rgba(249, 115, 22, 0.3); }
+        .nav-btn:hover { background: var(--primary); color: white !important; }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; flex: 1; }
+        
+        /* Header & Download Box */
+        .app-header { text-align: center; margin-bottom: 30px; }
+        .app-icon { width: 130px; height: 130px; border-radius: 28px; object-fit: cover; border: 2px solid var(--surface); box-shadow: 0 0 30px rgba(249, 115, 22, 0.2); margin-bottom: 20px; }
+        .app-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; color: white;}
+        .app-desc { color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+
+        .download-box { background: var(--surface); padding: 40px; border-radius: 24px; border: 1px solid var(--border); text-align: center; margin-bottom: 40px;}
+        .live-counter { font-size: 1.1rem; font-weight: 700; color: #fcd34d; margin-bottom: 15px; display: inline-flex; align-items: center; background: rgba(252, 211, 77, 0.1); padding: 8px 20px; border-radius: 100px; border: 1px solid rgba(252, 211, 77, 0.2); }
+        
+        .btn-group { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 20px 0; }
+        .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.1rem; font-weight: 700; padding: 16px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3); min-width: 260px; }
+        .btn-download:hover { background: var(--primary-hover); transform: translateY(-3px); }
+        
+        .btn-store { display: inline-flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.05); color: #e2e8f0; font-size: 1rem; font-weight: 600; padding: 14px 30px; border-radius: 100px; text-decoration: none; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.1); min-width: 260px; }
+        .btn-store:hover { background: rgba(255, 255, 255, 0.1); color: white; transform: translateY(-3px); }
+
+        .info-tag { font-size: 0.9rem; color: var(--text-muted); display: block; margin-top: 10px;}
+
+        /* Software Sections Styling */
+        .section-block { background: rgba(30, 41, 59, 0.4); padding: 40px; border-radius: 24px; border: 1px solid var(--border); margin-bottom: 40px; text-align: left; }
+        .section-title { color: white; font-size: 1.6rem; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        .section-text { color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 15px;}
+        
+        /* Flexible Horizontal Screenshots Grid (PC Prioritized) */
+        .screenshot-grid { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; align-items: center; }
+        .screenshot-grid img.pc-img { height: 260px; width: auto; border-radius: 12px; border: 2px solid var(--border); box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: 0.3s; flex-shrink: 0; background: var(--surface); }
+        .screenshot-grid img.mobile-img { height: 350px; width: auto; border-radius: 16px; border: 2px solid var(--border); box-shadow: 0 10px 20px rgba(0,0,0,0.2); transition: 0.3s; flex-shrink: 0; background: var(--surface); opacity: 0.7;}
+        .screenshot-grid img:hover { transform: scale(1.03); border-color: var(--primary); opacity: 1;}
+
+        /* Two Column Layouts */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+        
+        .spec-box { background: rgba(15, 23, 42, 0.6); padding: 20px; border-radius: 12px; border: 1px solid var(--border); }
+        .spec-box h4 { color: #fdba74; margin-bottom: 10px; font-size: 1.1rem; }
+        .spec-box ul { list-style: none; padding: 0; color: var(--text-muted); font-size: 0.95rem; }
+        .spec-box li { margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.02); }
+        .spec-box li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+        /* Lists & Steps */
+        .step-list { counter-reset: steps; list-style: none; padding: 0; margin-top: 20px; }
+        .step-list li { position: relative; padding-left: 45px; margin-bottom: 20px; color: var(--text-muted); font-size: 1.05rem; }
+        .step-list li::before { counter-increment: steps; content: counter(steps); position: absolute; left: 0; top: 0; width: 30px; height: 30px; background: rgba(249, 115, 22, 0.2); color: #fdba74; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; border: 1px solid rgba(249, 115, 22, 0.4); }
+        .step-list strong { color: white; }
+
+        /* Warning/Info Boxes */
+        .alert-box { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; padding: 15px 20px; margin-top: 20px; color: #fca5a5; font-size: 0.95rem; }
+        .alert-box strong { color: #f87171; display: block; margin-bottom: 5px; font-size: 1.05rem;}
+        
+        .info-box { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 12px; padding: 15px 20px; margin-top: 20px; color: #bfdbfe; font-size: 0.95rem; text-align: left; max-width: 600px; margin: 15px auto 0;}
+        .info-box strong { color: #60a5fa; display: block; margin-bottom: 5px; font-size: 0.95rem;}
+
+        /* SEO Article Typography */
+        .article-text h3 { color: #fdba74; font-size: 1.3rem; margin-top: 30px; margin-bottom: 10px; }
+        .article-text p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 15px; line-height: 1.8; }
+        .article-text a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .article-text a:hover { text-decoration: underline; }
+
+        footer { border-top: 1px solid var(--border); padding: 50px 20px; text-align: center; margin-top: auto; background: #080c17; }
+        .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 20px; }
+        .footer-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .footer-nav a:hover { color: var(--primary); }
+        .copyright { color: rgba(255, 255, 255, 0.2); font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; padding: 15px; gap: 15px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; }
+            .section-block { padding: 25px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main Navigation">
+        <a href="/" class="nav-brand" aria-label="BSR Studios Home">
+            <img src="../logo.jpg" alt="BSR Studios Logo" onerror="this.src='fallback-logo.png'">
+            <span class="nav-brand-text">BSR Studios</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="../apps.html">All Apps</a>
+            <a href="https://github.com/BSR-Studios" target="_blank" rel="noopener noreferrer" class="nav-btn">View GitHub</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <header class="app-header">
+            <img src="https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Phone%20Pad.png" alt="Phone Pad PC Server Logo" class="app-icon">
+            <h1 class="app-title">Phone Pad PC Server</h1>
+            <p class="app-desc">
+                The essential Windows companion software that seamlessly bridges your Android smartphone to your PC, turning it into a zero-lag wireless mouse.
+            </p>
+        </header>
+
+        <div class="download-box">
+            <h2 style="font-size: 1.4rem; margin-bottom: 10px; color: white;">Download Windows Receiver</h2>
+            
+            <div style="margin: 15px auto;">
+                <div class="live-counter" id="downloadCountDisplay">🔥 Total Downloads: Loading...</div>
+            </div>
+            
+            <div class="btn-group">
+                <a href="https://bsr-download-tracker.aryanmewadastudios.workers.dev/download/phonepad_server" class="btn-download" target="_blank" onclick="incrementDownloadUi()">
+                    💻 Download for Windows
+                </a>
+                
+                <a href="Phone-Pad.html" class="btn-store">
+                    📱 Get the Android App
+                </a>
+            </div>
+            
+            <span class="info-tag">Version 1.0.0 (.exe) • Windows 7/10/11 Compatible</span>
+
+            <div class="info-box">
+                <strong>🔗 How the System Works</strong>
+                This is the <b>PC Receiver Application</b>. It must be running on your computer to catch the signals sent from your phone. Make sure you also have the main Phone Pad app installed on your Android device.
+            </div>
+        </div>
+
+        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 0 auto 40px; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <section class="section-block">
+            <h2 class="section-title">Windows Server Overview</h2>
+            <div class="article-text">
+                <p>
+                    To use your smartphone as a wireless mouse, your computer needs to understand the touch signals coming from the phone. The <strong>Phone Pad PC Server</strong> is a lightweight background application designed specifically to translate those Wi-Fi network packets into smooth, native Windows API cursor movements.
+                </p>
+                
+                <h3>Ultra-Lightweight Background Process</h3>
+                <p>
+                    Unlike other remote control applications that run heavy UI elements and consume excessive RAM, the Phone Pad Server is designed for efficiency. It initializes a silent local server, displays your local IP address for connection, and then minimizes quietly to your Windows System Tray. It consumes virtually zero CPU power, ensuring your PC runs flawlessly while gaming or working.
+                </p>
+
+                <h3>Secure Local Network Connection</h3>
+                <p>
+                    Your privacy and security are our top priorities. The Phone Pad Server does <strong>not</strong> route your inputs through the internet or any external cloud servers. The connection happens entirely offline via your local router (WLAN) using fast UDP/TCP protocols. This not only ensures maximum privacy but is also the reason the mouse movement feels completely lag-free.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-title">Application Interface</h2>
+            <div class="screenshot-grid">
+                <img class="pc-img" src="https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Server%20Home.png" alt="Phone Pad PC Server IP Screen">
+                <img class="pc-img" src="https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Server%20Connectd.png" alt="Phone Pad Server Connected Status">
+                
+                <img class="mobile-img" src="https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Home.jpg" alt="Android Connector View">
+                <img class="mobile-img" src="https://github.com/AryanMewada/Resources/raw/main/Phone%20Pad/Touchpad.jpg" alt="Android Touchpad Interface">
+            </div>
+        </section>
+
+        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 0 auto 40px; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div class="two-col" style="margin-top: 0; align-items: stretch;">
+            
+            <section class="section-block" style="margin-bottom: 0;">
+                <h2 class="section-title" style="font-size: 1.4rem;">System Requirements</h2>
+                <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.8;">
+                    <li><strong>Operating System:</strong> Windows 7, Windows 10, or Windows 11 (32-bit & 64-bit supported).</li>
+                    <li><strong>Network:</strong> A working Wi-Fi adapter or Ethernet connection to a local router.</li>
+                    <li><strong>Permissions:</strong> Administrator privileges to allow the app through the Windows Defender Firewall.</li>
+                </ul>
+
+                <h2 class="section-title" style="font-size: 1.4rem; margin-top: 30px;">Companion App</h2>
+                <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; border: 1px solid var(--border);">
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 10px;">The PC server cannot function alone. You need to install the controller app on your phone.</p>
+                    <a href="Phone-Pad.html" style="color: var(--primary); text-decoration: none; font-weight: bold;">Download Phone Pad for Android ➔</a>
+                </div>
+            </section>
+
+            <section class="section-block" style="margin-bottom: 0;">
+                <h2 class="section-title" style="font-size: 1.4rem; color: #fca5a5; border-color: rgba(239,68,68,0.2);">Firewall Setup & Troubleshooting</h2>
+                
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">
+                    Because this application creates a local network server to receive signals, Windows will block it by default. 
+                </p>
+
+                <div class="alert-box" style="margin-top: 0;">
+                    <strong>Step 1: The Initial Prompt</strong>
+                    When you run the <code>PhonePad_Server.exe</code> for the very first time, a Windows Security Alert popup will appear asking for network access.
+                </div>
+
+                <div class="alert-box">
+                    <strong>Step 2: Allow Access</strong>
+                    Make sure to check the boxes for <b>"Private networks"</b> and click the <b>"Allow access"</b> button. If you click cancel, your phone will not be able to connect to the PC.
+                </div>
+
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 20px;">
+                    If you accidentally denied access, you can fix it by searching for "Allow an app through Windows Firewall" in your start menu and enabling the checkbox next to Phone Pad.
+                </p>
+            </section>
+
+        </div>
+
+        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 40px auto 0; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="../about.html">About Us</a>
+            <a href="../contact.html">Contact Us</a>
+            <a href="../privacy-policy.html">Privacy Policy</a>
+            <a href="../terms.html">Terms & Conditions</a>
+            <a href="../disclaimer.html">Disclaimer</a>
+            <a href="../dmca.html">DMCA Policy</a>
+        </div>
+        <p class="copyright">© 2026 BSR Studios. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Universal Tracker API URL
+        const TRACKER_API = 'https://bsr-download-tracker.aryanmewadastudios.workers.dev';
+        
+        const countDisplay = document.getElementById('downloadCountDisplay');
+
+        // Fetch count for the PC Server specifically
+        async function fetchDownloadCount() {
+            try {
+                const response = await fetch(`${TRACKER_API}/count/phonepad_server`);
+                const data = await response.json();
+                
+                const formattedCount = data.count.toLocaleString('en-US');
+                countDisplay.innerText = `🔥 Total Downloads: ${formattedCount}`;
+            } catch (err) {
+                console.error("Fetch Error:", err);
+                countDisplay.innerText = "🔥 Trusted by many users";
+            }
+        }
+
+        // Simple UI update when download is clicked
+        function incrementDownloadUi() {
+            countDisplay.innerText = "🔥 Downloading...";
+            setTimeout(fetchDownloadCount, 3000);
+        }
+
+        // Run on load
+        window.addEventListener('DOMContentLoaded', fetchDownloadCount);
+    </script>
+</body>
+</html>
