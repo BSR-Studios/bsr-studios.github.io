@@ -8,9 +8,9 @@
 
     <title>Any Screen Recorder - Lightweight PC Screen Recorder</title>
     
-    <meta name="description" content="Download Any Screen Recorder for Windows, a lightweight screen recorder for low end PCs. Record gameplay, desktop screen, and internal audio smoothly with low CPU usage and no watermark.">
+    <meta name="description" content="Download Any Screen Recorder for Windows, an efficient screen recorder for budget PCs. Record gameplay, desktop screens, and internal audio with minimal CPU usage.">
     
-    <meta name="keywords" content="Any Screen Recorder, screen recorder for low end PC, lightweight screen recorder for Windows, free screen recorder without watermark, gameplay recorder for 2GB RAM PC, screen recorder with internal audio, screen recorder for Windows 10 and 11, record screen smoothly on low spec PC, how to record screen on low end PC, how to record gameplay on 2GB RAM PC, how to record screen without lag on Windows, how to record internal audio on PC, BSR Studios Any Screen Recorder">
+    <meta name="keywords" content="Any Screen Recorder, screen recorder for low end PC, lightweight screen recorder for Windows, free screen recorder without watermark, gameplay recorder for 2GB RAM PC, screen recorder with internal audio, screen recorder for Windows 10 and 11, record screen smoothly on budget PC, how to record screen on low end PC, how to record gameplay on 2GB RAM PC, efficient screen recorder for Windows, how to record internal audio on PC, BSR Studios Any Screen Recorder">
     
     <meta name="author" content="BSR Studios">
     <meta name="robots" content="index, follow">
@@ -55,7 +55,6 @@
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <style>
         :root { --bg: #0b1120; --surface: #1e293b; --primary: #3b82f6; --primary-hover: #2563eb; --accent: #60a5fa; --text-main: #ffffff; --text-muted: #94a3b8; --border: rgba(255,255,255,0.05); }
@@ -150,13 +149,13 @@
 
     <nav aria-label="Main Navigation">
         <a href="/" class="nav-brand" aria-label="BSR Studios Home">
-            <img src="../logo.jpg" alt="BSR Studios Logo">
+            <img src="../logo.jpg" alt="BSR Studios Logo" onerror="this.src='fallback-logo.png'">
             <span class="nav-brand-text">BSR Studios</span>
         </a>
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="../apps.html">All Apps</a>
-            <a href="../contact.html">Contact Us</a>
+            <a href="https://github.com/BSR-Studios" target="_blank" rel="noopener noreferrer" class="nav-btn">View GitHub</a>
         </div>
     </nav>
 
@@ -165,7 +164,7 @@
         <header class="app-header">
             <img src="https://github.com/AryanMewada/Resources/raw/main/Any_Screen_Recorder.png" alt="Any Screen Recorder Logo" class="app-icon">
             <h1 class="app-title">Any Screen Recorder</h1>
-            <p class="app-desc">Any Screen Recorder is a lightweight Windows screen recorder for low end PCs. If you are looking for how to record screen on a low spec PC, how to record gameplay on 2GB RAM, or how to capture internal audio without lag, this tool is designed to help.</p>
+            <p class="app-desc">Any Screen Recorder is an efficient Windows screen recorder optimized for budget PCs. If you are looking to capture gameplay or record your screen with minimal system impact, this tool is designed to help.</p>
         </header>
 
         <section class="download-box">
@@ -176,7 +175,7 @@
             </div>
 
             <div class="btn-group">
-                <a href="https://github.com/AryanMewada/Resources/raw/main/Any_Screen_Recorder_Setup_v1.0.exe" target="_blank" rel="noopener noreferrer" class="btn-download" onclick="incrementDownload(event)">
+                <a href="https://bsr-download-tracker.aryanmewadastudios.workers.dev/download/anyscreenrecorder" target="_blank" class="btn-download" onclick="incrementDownloadUi()">
                     Download For Windows
                 </a>
                 <a href="https://github.com/BSR-Studios" target="_blank" rel="noopener noreferrer" class="btn-github">
@@ -380,51 +379,31 @@
     </footer>
 
     <script>
-        const appName = 'Any Screen Recorder';
+        // Universal Tracker API URL
+        const TRACKER_API = 'https://bsr-download-tracker.aryanmewadastudios.workers.dev';
+        const appKey = 'anyscreenrecorder';
+        
         const countDisplay = document.getElementById('downloadCountDisplay');
-        const vercelApiUrl = 'https://bsr-backend-server.vercel.app/api/increment?app=' + encodeURIComponent(appName);
 
-        if (window.supabase) {
-            const supabaseUrl = 'https://popqfjpredtwtzeennrz.supabase.co'; 
-            const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvcHFmanByZWR0d3R6ZWVubnJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyNDU2MDEsImV4cCI6MjA4ODgyMTYwMX0.EEdp_Qr4YsTSNp9zeN5NmWIyRmZBaJ1UNzle48DbmcA';
-            const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-            
-            async function fetchDownloadCount() {
-                try {
-                    const { data, error } = await supabaseClient
-                        .from('downloads')
-                        .select('download_count')
-                        .eq('app_name', appName)
-                        .single();
-                    
-                    if (data) {
-                        countDisplay.innerText = `📥 Total Downloads: ${data.download_count}`;
-                    }
-                } catch (err) {
-                    console.error("Fetch Error:", err);
-                }
-            }
-            fetchDownloadCount();
-        }
-
-        async function incrementDownload(event) {
-            countDisplay.innerText = "⏳ Updating count...";
-
+        async function fetchDownloadCount() {
             try {
-                const response = await fetch(vercelApiUrl);
-                const result = await response.json();
-
-                if (result.success) {
-                    countDisplay.innerText = `📥 Total Downloads: ${result.newCount}`;
-                } else {
-                    countDisplay.innerText = "Error updating count";
-                    console.error("Backend Error:", result);
-                }
+                const response = await fetch(`${TRACKER_API}/count/${appKey}`);
+                const data = await response.json();
+                
+                const formattedCount = data.count.toLocaleString('en-US');
+                countDisplay.innerText = `📥 Total Downloads: ${formattedCount}`;
             } catch (err) {
-                countDisplay.innerText = "Network Error";
-                console.error("Fetch failed:", err);
+                console.error("Fetch Error:", err);
+                countDisplay.innerText = "📥 Trusted by many users";
             }
         }
+
+        function incrementDownloadUi() {
+            countDisplay.innerText = "⏳ Downloading...";
+            setTimeout(fetchDownloadCount, 3000);
+        }
+
+        window.addEventListener('DOMContentLoaded', fetchDownloadCount);
     </script>
 </body>
 </html>

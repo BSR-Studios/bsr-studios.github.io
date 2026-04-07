@@ -6,18 +6,18 @@
     
     <link rel="canonical" href="https://bsr-studios.github.io/apps/AnyWebWall.html" />
 
-    <title>AnyWebWall-Free Live Wallpaper App for Low End PC</title>
+    <title>AnyWebWall - Lightweight C++ 3D Live Wallpaper Engine</title>
     
-    <meta name="description" content="Download AnyWebWall, the ultimate high-performance C++ & OpenGL live wallpaper engine. Run interactive 2D/3D .aww wallpapers with 0% CPU & 20MB RAM usage.">
+    <meta name="description" content="Download AnyWebWall, a highly optimized C++ & OpenGL live wallpaper engine. Run interactive 2D/3D .aww wallpapers with minimal CPU and RAM usage.">
     
-    <meta name="keywords" content="AnyWebWall, AnyWebWall Engine, .aww file player, HTML Live Wallpaper, Web Wallpaper for PC, Matrix Rain Desktop, Code Wallpaper, Hacker Style Background, Interactive Desktop Wallpaper, Ultra Lite Wallpaper Engine, Javascript Wallpaper, CSS Animation Desktop, Live Wallpaper for 4GB RAM, Programmer Wallpaper, Tech Backgrounds, Custom Desktop Widgets, anywebwall download, any web wall, Webeo wallpaper, live wallpaper app download for pc, Best Live Wallpaper App For PC, best live wallpaper app for low end pc, anyWebwall live wallpaper app, 3d wallpaper engine, openGL wallpaper, c++ live wallpaper, 0% cpu wallpaper, no lag wallpaper, free wallpaper engine alternative, lively wallpaper alternative, dynamic desktop, interactive aww files, custom background app, BSR Studios software, low specs pc customization, aesthetic pc setup, tech geek wallpaper, matrix digital rain, 3d earth interactive wallpaper, rubiks cube wallpaper, cursor trail effect pc, desktop modding tools, best freeware customization, windows 10 live backgrounds, windows 11 motion backgrounds, pc optimization tools, gaming pc wallpaper, lightweight animated backgrounds, bsr apps, tech software downloads, animated desktop free, motion wallpaper, custom windows UI, low resource background player">
+    <meta name="keywords" content="AnyWebWall, AnyWebWall Engine, .aww file player, HTML Live Wallpaper, Web Wallpaper for PC, Matrix Rain Desktop, Code Wallpaper, Hacker Style Background, Interactive Desktop Wallpaper, Lightweight Wallpaper Engine, Javascript Wallpaper, CSS Animation Desktop, Live Wallpaper for 4GB RAM, Programmer Wallpaper, Tech Backgrounds, Custom Desktop Widgets, anywebwall download, any web wall, Webeo wallpaper, live wallpaper app download for pc, Best Live Wallpaper App For PC, efficient live wallpaper app for low end pc, anyWebwall live wallpaper app, 3d wallpaper engine, openGL wallpaper, c++ live wallpaper, low cpu wallpaper, smooth wallpaper, free wallpaper engine alternative, lively wallpaper alternative, dynamic desktop, interactive aww files, custom background app, BSR Studios software, pc customization, aesthetic pc setup, tech geek wallpaper, matrix digital rain, 3d earth interactive wallpaper, rubiks cube wallpaper, cursor trail effect pc, desktop modding tools, best freeware customization, windows 10 live backgrounds, windows 11 motion backgrounds, pc optimization tools, gaming pc wallpaper, lightweight animated backgrounds, bsr apps, tech software downloads, animated desktop free, motion wallpaper, custom windows UI, low resource background player">
     
     <meta name="author" content="BSR Studios">
     <meta name="robots" content="index, follow">
 
     <meta property="og:type" content="software">
-    <meta property="og:title" content="AnyWebWall - Ultra Lite C++ 3D Live Wallpaper Engine">
-    <meta property="og:description" content="Run interactive 2D/3D .aww wallpapers with 0% CPU & 20MB RAM usage. Built with pure C++ and OpenGL.">
+    <meta property="og:title" content="AnyWebWall - Lightweight C++ 3D Live Wallpaper Engine">
+    <meta property="og:description" content="Run interactive 2D/3D .aww wallpapers efficiently with minimal CPU & RAM usage. Built with C++ and OpenGL.">
     <meta property="og:image" content="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
     
     <link rel="icon" type="image/png" href="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png">
@@ -30,7 +30,7 @@
       "name": "AnyWebWall",
       "operatingSystem": "Windows 7, 10, 11",
       "applicationCategory": "DesktopEnhancementApplication",
-      "description": "AnyWebWall is a next-generation high-performance wallpaper engine. It runs exclusive .aww files built with C++ and OpenGL for true 2D/3D interactive wallpapers with 0% CPU usage.",
+      "description": "AnyWebWall is an optimized high-performance wallpaper engine. It runs exclusive .aww files built with C++ and OpenGL for true 2D/3D interactive wallpapers with minimal CPU usage.",
       "softwareVersion": "1.0.0",
       "author": {
         "@type": "Organization",
@@ -47,7 +47,6 @@
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <style>
         :root { --bg: #0b1120; --surface: #1e293b; --primary: #8b5cf6; --primary-hover: #7c3aed; --accent: #c4b5fd; --text-main: #ffffff; --text-muted: #94a3b8; --border: rgba(255,255,255,0.05); }
@@ -83,7 +82,7 @@
         .live-counter { font-size: 1.1rem; font-weight: 700; color: #fcd34d; margin-bottom: 15px; display: inline-flex; align-items: center; background: rgba(252, 211, 77, 0.1); padding: 8px 20px; border-radius: 100px; border: 1px solid rgba(252, 211, 77, 0.2); }
         .btn-group { display: flex; flex-direction: column; gap: 15px; align-items: center; margin: 20px 0; }
         
-        .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 16px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; width: 100%; max-width: 350px; box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3); }
+        .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 16px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; width: 100%; max-width: 350px; box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3); border: none; cursor: pointer; }
         .btn-download:hover { background: var(--primary-hover); transform: translateY(-3px); }
         
         .btn-store { display: inline-flex; align-items: center; justify-content: center; background: rgba(139, 92, 246, 0.15); color: #c4b5fd; font-size: 1.1rem; font-weight: 600; padding: 14px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; width: 100%; max-width: 350px; border: 1px solid rgba(139, 92, 246, 0.3); }
@@ -92,7 +91,7 @@
         .info-tag { font-size: 0.9rem; color: var(--text-muted); display: block; }
 
         /* Software Sections Styling */
-        .section-block { background: rgba(30, 41, 59, 0.4); padding: 40px; border-radius: 24px; border: 1px solid var(--border); margin-bottom: 40px; }
+        .section-block { background: rgba(30, 41, 59, 0.4); padding: 40px; border-radius: 24px; border: 1px solid var(--border); margin-bottom: 40px; text-align: left; }
         .section-title { color: white; font-size: 1.6rem; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
         .section-text { color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 15px;}
         
@@ -140,7 +139,7 @@
 
     <nav aria-label="Main Navigation">
         <a href="/" class="nav-brand" aria-label="BSR Studios Home">
-            <img src="../logo.jpg" alt="BSR Studios Logo">
+            <img src="../logo.jpg" alt="BSR Studios Logo" onerror="this.src='fallback-logo.png'">
             <span class="nav-brand-text">BSR Studios</span>
         </a>
         <div class="nav-links">
@@ -156,7 +155,7 @@
             <img src="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall.png" alt="AnyWebWall Logo" class="app-icon">
             <h1 class="app-title">AnyWebWall</h1>
             <p class="app-desc">
-                The ultimate 2D/3D interactive wallpaper engine. Powered by pure C++ and OpenGL to run dynamic `.aww` wallpapers with absolute 0% CPU usage.
+                A highly optimized 2D/3D interactive wallpaper engine. Powered by C++ and OpenGL to run dynamic `.aww` wallpapers efficiently with minimal CPU usage.
             </p>
         </header>
 
@@ -168,7 +167,7 @@
             </div>
             
             <div class="btn-group">
-                <a href="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall_Setup_v1.2.0.exe" target="_blank" rel="noopener noreferrer" class="btn-download" onclick="incrementDownload(event)">
+                <a href="https://bsr-download-tracker.aryanmewadastudios.workers.dev/download/anywebwall" target="_blank" class="btn-download" onclick="incrementDownloadUi()">
                     Download for Windows
                 </a>
                 <a href="../aww.html" class="btn-store">
@@ -180,8 +179,7 @@
 
             <div class="info-box">
                 <strong>🛡️ Installation Guide</strong>
-                Our software is highly optimized and free of viruses or telemetry. However, since it is a new indie software, Windows Defender might show a blue "Windows protected your PC" screen. 
-                <br>Just click <b>'More info'</b> and then <b>'Run anyway'</b> to install safely.
+                Our software is carefully optimized. However, as it is an independent application, Windows Defender SmartScreen might display a prompt. Just click <b>'More info'</b> and then <b>'Run anyway'</b> to install safely.
             </div>
         </div>
 
@@ -200,7 +198,7 @@
         <section class="section-block">
             <h2 class="section-title">App Overview</h2>
             <p class="section-text">
-                Most modern interactive wallpaper engines use heavy HTML/CSS/JS web-frameworks (like Chromium) which consume massive amounts of RAM and cause games to lag. <strong>AnyWebWall</strong> solves this by using a proprietary <strong>C++ and OpenGL</strong> rendering engine. It is designed to run exclusively formatted <code>.aww</code> files. Whether it is a 3D rotating planet or a Matrix digital rain effect, AnyWebWall ensures that your desktop looks futuristic while keeping your PC performance at 100%.
+                Some interactive wallpaper engines use extensive HTML/CSS/JS web-frameworks which can consume significant memory and impact system performance. <strong>AnyWebWall</strong> addresses this by using a compiled <strong>C++ and OpenGL</strong> rendering engine. Designed to run exclusively formatted <code>.aww</code> files—like a 3D rotating planet or a Matrix digital rain effect—AnyWebWall helps maintain stable PC performance while offering a highly customizable desktop experience.
             </p>
         </section>
 
@@ -213,6 +211,18 @@
                 <img src="https://github.com/AryanMewada/Resources/raw/main/AnyWebWall/AnyWebWall%203.png" alt="AnyWebWall Dashboard">
             </div>
         </section>
+
+        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 0 auto 40px; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
 
         <section class="section-block">
             <h2 class="section-title">System Requirements</h2>
@@ -238,53 +248,29 @@
             </div>
         </section>
 
-        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 0 auto 40px; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
-            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-1032421976701438"
-                 data-ad-slot="5645597669"
-                 data-ad-format="horizontal"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
         <section class="section-block">
             <h2 class="section-title">How to Use AnyWebWall</h2>
             <ul class="step-list">
-                <li><strong>First Launch:</strong> Open the app. The iconic "Matrix Digital Rain" wallpaper will be applied automatically by default.</li>
+                <li><strong>First Launch:</strong> Open the app. The "Matrix Digital Rain" wallpaper is applied automatically as a default demonstration.</li>
                 <li><strong>Access the Dashboard:</strong> Look for the AnyWebWall icon in your system tray (bottom right corner). Click it to open the main Dashboard. Here you will also find the "Run on Startup" and "Exit" options.</li>
-                <li><strong>Real-Time Settings:</strong> In the Dashboard, you will see a <b>"Wallpaper Settings"</b> section. Because every <code>.aww</code> file is unique, these settings change based on the active wallpaper (e.g., you can change font size, background color, or animation speed).</li>
-                <li><strong>Download New Themes:</strong> Click the <b>"Download Wallpapers"</b> button in the dashboard to open our online gallery, where you can browse and download new 3D and 2D themes.</li>
-                <li><strong>Apply a Wallpaper:</strong> You have two choices: either click <b>"Import .aww file"</b> from the dashboard, OR simply double-click any downloaded <code>.aww</code> file directly in your Windows File Manager.</li>
-                <li><strong>Set Static Fallback Image:</strong> Use the <b>"Set Static Image"</b> option to choose a normal picture. If you ever exit the AnyWebWall engine, your desktop will revert to this image.</li>
+                <li><strong>Real-Time Settings:</strong> In the Dashboard, you will see a <b>"Wallpaper Settings"</b> section. Because every <code>.aww</code> file is unique, these parameters adjust based on the active wallpaper (e.g., you can change font size, background color, or animation speed).</li>
+                <li><strong>Download New Themes:</strong> Click the <b>"Download Wallpapers"</b> button to open our online gallery, where you can browse and download new 3D and 2D themes.</li>
+                <li><strong>Apply a Wallpaper:</strong> You have two choices: either click <b>"Import .aww file"</b> from the dashboard, OR simply double-click any downloaded <code>.aww</code> file directly in your Windows File Explorer.</li>
+                <li><strong>Set Static Fallback Image:</strong> Use the <b>"Set Static Image"</b> option to choose a standard picture. If you exit the AnyWebWall engine, your desktop will revert to this image.</li>
             </ul>
         </section>
-
-        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 0 auto 40px; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
-            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-1032421976701438"
-                 data-ad-slot="5645597669"
-                 data-ad-format="horizontal"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
 
         <section class="section-block">
             <h2 class="section-title">Frequently Asked Questions</h2>
             
             <div class="faq-item">
-                <div class="faq-q">1. Can this run smoothly on a low-end PC?</div>
-                <div class="faq-a">Yes! It runs perfectly smooth (makhan ki tarah) even on 2GB RAM PCs because of its zero-lag C++ architecture.</div>
+                <div class="faq-q">1. Is it suitable for systems with 2GB RAM?</div>
+                <div class="faq-a">Yes! It runs very smoothly even on systems with limited memory due to its optimized C++ architecture.</div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-q">2. Does it support MP4 or video wallpapers?</div>
-                <div class="faq-a">No. AnyWebWall is specially designed to run ONLY <code>.aww</code> format interactive files. If you want to set normal videos (MP4) as your wallpaper, please download our other app: <b>AnyVidWall</b>.</div>
+                <div class="faq-a">No. AnyWebWall is specifically designed to run ONLY <code>.aww</code> format interactive files. If you want to set normal videos (MP4) as your wallpaper, please download our other app: <b>AnyVidWall</b>.</div>
             </div>
 
             <div class="faq-item">
@@ -293,8 +279,8 @@
             </div>
 
             <div class="faq-item">
-                <div class="faq-q">4. Does it support fully 3D interactive wallpapers?</div>
-                <div class="faq-a">Absolutely! You can run complex 3D models (like a rotating Earth or Rubik's Cube) and interact with them using your mouse.</div>
+                <div class="faq-q">4. Does it support 3D interactive wallpapers?</div>
+                <div class="faq-a">Absolutely. You can run 3D models (like a rotating Earth or Rubik's Cube) and interact with them directly using your mouse.</div>
             </div>
         </section>
 
@@ -303,14 +289,14 @@
             <section class="section-block" style="margin-bottom: 0;">
                 <h2 class="section-title" style="font-size: 1.4rem;">Known Limitations</h2>
                 <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
-                    <li style="margin-bottom: 10px;"><strong>Proprietary Format:</strong> Because it prioritizes performance using C++, it does NOT support standard HTML/CSS/JS web wallpapers. It only supports the exclusive <code>.aww</code> files provided in our gallery.</li>
-                    <li><strong>Basic UI:</strong> To keep memory usage under 20MB, the user interface focuses strictly on basic functionality rather than heavy aesthetics.</li>
+                    <li style="margin-bottom: 10px;"><strong>Proprietary Format:</strong> To prioritize efficiency using C++, the engine does NOT support standard HTML/CSS/JS web wallpapers. It only supports the custom <code>.aww</code> files provided in our gallery.</li>
+                    <li><strong>Basic UI:</strong> To keep memory usage minimal, the user interface focuses strictly on functionality rather than visual aesthetics.</li>
                 </ul>
 
-                <h2 class="section-title" style="font-size: 1.4rem; margin-top: 30px;">Changelog</h2>
+                <h2 class="section-title" style="font-size: 1.4rem; margin-top: 30px;">Release Notes</h2>
                 <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; border: 1px solid var(--border);">
                     <strong style="color: white;">v1.0.0 (Current Release)</strong>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">- Initial public release.<br>- C++ and OpenGL rendering active.<br>- Native .aww file association support.<br><i>Note: Advanced gaming-mode auto-pause is not available in this version.</i></p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 5px;">- Initial public release.<br>- C++ and OpenGL rendering integrated.<br>- Native .aww file association support.<br><i>Note: Advanced auto-pause for gaming is not available in this version.</i></p>
                 </div>
             </section>
 
@@ -318,7 +304,7 @@
                 <h2 class="section-title" style="font-size: 1.4rem; color: #fca5a5; border-color: rgba(239,68,68,0.2);">Troubleshooting</h2>
                 
                 <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">
-                    AnyWebWall is highly stable and known issues are rare. However, if you encounter problems:
+                    AnyWebWall is designed to be highly stable, but if you encounter issues:
                 </p>
 
                 <div class="alert-box" style="margin-top: 0;">
@@ -328,14 +314,26 @@
 
                 <div class="alert-box">
                     <strong>Installation Blocked?</strong>
-                    If Windows Defender shows a blue "Windows protected your PC" screen, click <b>'More info'</b> and <b>'Run anyway'</b>. The software is completely safe.
+                    If Windows Defender shows a blue "Windows protected your PC" screen, click <b>'More info'</b> and <b>'Run anyway'</b>.
                 </div>
 
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 20px;">
-                    If a specific wallpaper file is crashing, please let us know via our <a href="../contact.html" style="color: #8b5cf6;">Contact Page</a> so we can fix it!
+                    If a specific wallpaper file is crashing, please let us know via our <a href="../contact.html" style="color: #8b5cf6;">Contact Page</a> so we can investigate.
                 </p>
             </section>
 
+        </div>
+
+        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 40px auto 0; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
     </div>
@@ -346,58 +344,38 @@
             <a href="../contact.html">Contact Us</a>
             <a href="../privacy-policy.html">Privacy Policy</a>
             <a href="../terms.html">Terms & Conditions</a>
+            <a href="../disclaimer.html">Disclaimer</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../dmca.html">DMCA Policy</a>
         </div>
         <p class="copyright">© 2026 BSR Studios. All rights reserved.</p>
     </footer>
 
     <script>
-        const appName = 'AnyWebWall';
+        const TRACKER_API = 'https://bsr-download-tracker.aryanmewadastudios.workers.dev';
+        const appKey = 'anywebwall';
+
         const countDisplay = document.getElementById('downloadCountDisplay');
-        const vercelApiUrl = 'https://bsr-backend-server.vercel.app/api/increment?app=' + encodeURIComponent(appName);
 
-        if (window.supabase) {
-            const supabaseUrl = 'https://popqfjpredtwtzeennrz.supabase.co'; 
-            const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvcHFmanByZWR0d3R6ZWVubnJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyNDU2MDEsImV4cCI6MjA4ODgyMTYwMX0.EEdp_Qr4YsTSNp9zeN5NmWIyRmZBaJ1UNzle48DbmcA';
-            const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-            
-            async function fetchDownloadCount() {
-                try {
-                    const { data, error } = await supabaseClient
-                        .from('downloads')
-                        .select('download_count')
-                        .eq('app_name', appName)
-                        .single();
-                    
-                    if (data) {
-                        countDisplay.innerText = `🔥 Total Downloads: ${data.download_count}`;
-                    } else {
-                        countDisplay.innerText = "🔥 Total Downloads: 0"; 
-                    }
-                } catch (err) {
-                    console.error("Fetch Error:", err);
-                }
-            }
-            fetchDownloadCount();
-        }
-
-        async function incrementDownload(event) {
-            countDisplay.innerText = "🔥 Updating...";
-
+        async function fetchDownloadCount() {
             try {
-                const response = await fetch(vercelApiUrl);
-                const result = await response.json();
-
-                if (result.success) {
-                    countDisplay.innerText = `🔥 Total Downloads: ${result.newCount}`;
-                } else {
-                    countDisplay.innerText = "🔥 Update Error: " + (result.error || "Failed");
-                    console.error("Backend Error:", result);
-                }
+                const response = await fetch(`${TRACKER_API}/count/${appKey}`);
+                const data = await response.json();
+                
+                const formattedCount = data.count.toLocaleString('en-US');
+                countDisplay.innerText = `🔥 Total Downloads: ${formattedCount}`;
             } catch (err) {
-                countDisplay.innerText = "🔥 Network Error";
-                console.error("Fetch failed:", err);
+                console.error("Fetch Error:", err);
+                countDisplay.innerText = "🔥 Trusted by many users";
             }
         }
+
+        function incrementDownloadUi() {
+            countDisplay.innerText = "⏳ Downloading...";
+            setTimeout(fetchDownloadCount, 3000);
+        }
+
+        window.addEventListener('DOMContentLoaded', fetchDownloadCount);
     </script>
 </body>
 </html>
