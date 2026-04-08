@@ -8,9 +8,9 @@
 
     <title>Download 3D Rubik's Cube Live Wallpaper for PC | BSR Studios</title>
     
-    <meta name="description" content="Get an interactive 3D Rubik's Cube live wallpaper for your desktop. Built with C++ & OpenGL, it responds to your mouse with 0% CPU and 20MB RAM usage.">
+    <meta name="description" content="Get an interactive 3D Rubik's Cube live wallpaper for your desktop. Built with C++ & OpenGL, it responds to your mouse with 0% CPU. Learn how to get it today.">
     
-    <meta name="keywords" content="3D Rubiks Cube Live Wallpaper, Interactive Desktop Wallpaper, 3D PC Background, Rubiks Cube Desktop Widget, OpenGL 3D Wallpaper, AnyWebWall 3D Theme, .aww file download, Zero Lag 3D Wallpaper, C++ Live Wallpaper, Mouse Tracking Wallpaper, Low RAM 3D Wallpaper, BSR Apps, BSR Studios, Gaming PC Customization, rubiks cube interactive background, 3d modelling wallpaper, animated 3d object desktop, wallpaper engine alternative free, lively wallpaper 3d alternative, dynamic windows 10 background, windows 11 motion wallpaper, 3d geometry desktop, hardware accelerated wallpaper, zero resource usage live wallpaper, 0 cpu wallpaper pc, aesthetic gaming setup, tech geek background, programmer live wallpaper, interactive cube screensaver, cool pc screensavers, low end pc customization, 2gb ram live wallpaper, best free windows themes, make pc look cool, animated desktop free, motion wallpaper windows, custom windows UI, low resource background player, free desktop modding, 3d graphics desktop wallpaper, webgl cube background, rotate 3d object desktop, interactive 3d elements windows, aesthetic minimalist setup, zero lag wallpaper engine, pc optimization tools, high performance wallpaper, free tech utilities windows">
+    <meta name="keywords" content="how to get 3d rubiks cube wallpaper, how to make desktop interactive, how to set 3d object background windows 10, how to customize windows 11 desktop, 3D Rubiks Cube Live Wallpaper, Interactive Desktop Wallpaper, 3D PC Background, Rubiks Cube Desktop Widget, OpenGL 3D Wallpaper, AnyWebWall 3D Theme, .aww file download, Zero Lag 3D Wallpaper, C++ Live Wallpaper, Mouse Tracking Wallpaper, Low RAM 3D Wallpaper, BSR Apps, BSR Studios, Gaming PC Customization, rubiks cube interactive background, 3d modelling wallpaper, animated 3d object desktop, wallpaper engine alternative free, lively wallpaper 3d alternative, dynamic windows 10 background, windows 11 motion wallpaper, 3d geometry desktop, hardware accelerated wallpaper, zero resource usage live wallpaper, 0 cpu wallpaper pc, aesthetic gaming setup, tech geek background, programmer live wallpaper, interactive cube screensaver, cool pc screensavers, low end pc customization, 2gb ram live wallpaper, best free windows themes, make pc look cool, animated desktop free, motion wallpaper windows, custom windows UI, low resource background player, free desktop modding, 3d graphics desktop wallpaper, webgl cube background, rotate 3d object desktop, interactive 3d elements windows, aesthetic minimalist setup">
     
     <meta name="author" content="BSR Studios">
     <meta name="robots" content="index, follow">
@@ -50,7 +50,7 @@
     <style>
         /* Gaming Red/Orange Theme for Rubik's Cube */
         :root { --bg: #0b1120; --surface: #1e293b; --primary: #ef4444; --primary-hover: #dc2626; --text-main: #ffffff; --text-muted: #94a3b8; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; display: flex; flex-direction: column; min-height: 100vh; }
 
         /* NAV BAR */
@@ -73,10 +73,26 @@
 
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; flex: 1; }
 
-        /* LAYOUT */
+        /* HEADER / SCROLL BUTTON */
+        .page-header { text-align: center; margin-bottom: 40px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .page-header h1 { font-size: 2.2rem; color: white; margin-bottom: 15px; }
+        .btn-scroll { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--primary); border: 2px solid var(--primary); font-size: 1rem; font-weight: 700; padding: 12px 30px; border-radius: 100px; text-decoration: none; transition: 0.3s; }
+        .btn-scroll:hover { background: rgba(239, 68, 68, 0.1); transform: translateY(-3px); }
+
+        /* Massive SEO Article Box */
+        .seo-paragraph { background: rgba(30, 41, 59, 0.4); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 40px; text-align: left; }
+        .seo-paragraph h2 { font-size: 1.8rem; margin-bottom: 20px; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        .seo-paragraph h3 { font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; color: #f87171; }
+        .seo-paragraph p { color: #94a3b8; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
+        .seo-paragraph strong { color: white; }
+        .seo-paragraph ul, .seo-paragraph ol { margin-bottom: 15px; padding-left: 20px; color: #94a3b8; font-size: 1.05rem; }
+        .seo-paragraph li { margin-bottom: 10px; }
+
+        /* LAYOUT (Moved Down) */
         .wallpaper-layout { 
-            display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 50px; 
+            display: flex; flex-wrap: wrap; gap: 40px; margin-top: 50px; margin-bottom: 50px; 
             align-items: flex-start; justify-content: center;
+            background: rgba(30, 41, 59, 0.2); padding: 40px; border-radius: 20px; border: 1px solid var(--primary);
         }
         
         /* PERFECT GALLERY STYLE CARD */
@@ -95,8 +111,8 @@
             display: block; 
             border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
         }
-        .main-gif-info { padding: 20px; }
-        .main-gif-info h1 { font-size: 1.4rem; font-weight: 700; color: white; margin-bottom: 5px; line-height: 1.2; }
+        .main-gif-info { padding: 20px; text-align: center; }
+        .main-gif-info h2 { font-size: 1.4rem; font-weight: 700; color: white; margin-bottom: 5px; line-height: 1.2; }
         .main-gif-info p { color: var(--primary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
         
         /* WALLPAPER DETAILS (Right Side) */
@@ -107,11 +123,14 @@
         .specs-list li:last-child { margin-bottom: 0; }
         .specs-list li strong { color: white; }
 
-        .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 18px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(239, 68, 68, 0.3); text-align: center; }
+        .download-container { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 20px; }
+        .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 18px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(239, 68, 68, 0.3); text-align: center; width: 100%; max-width: 300px;}
         .btn-download:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(239, 68, 68, 0.4); }
+        .download-stats { font-size: 0.95rem; color: var(--text-muted); font-weight: 500; }
+        .download-stats span { color: var(--primary); font-weight: 700; }
 
         .engine-info { 
-            margin-top: 25px; padding: 16px 20px; border-radius: 12px; 
+            padding: 16px 20px; border-radius: 12px; 
             background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); 
             color: #e2e8f0; font-size: 0.95rem; line-height: 1.5;
         }
@@ -120,7 +139,7 @@
         .engine-info a:hover { background: #dc2626; }
 
         .recommended-section { margin-bottom: 50px; }
-        .recommended-section h3 { font-size: 1.5rem; margin-bottom: 25px; border-left: 4px solid var(--primary); padding-left: 15px; }
+        .recommended-section h3 { font-size: 1.5rem; margin-bottom: 25px; border-left: 4px solid var(--primary); padding-left: 15px; color: white;}
         .rec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
         .rec-card { background: var(--surface); border-radius: 16px; overflow: hidden; text-decoration: none; transition: transform 0.3s; border: 1px solid rgba(255,255,255,0.05); }
         .rec-card:hover { transform: translateY(-5px); border-color: var(--primary); }
@@ -128,15 +147,6 @@
         .rec-info { padding: 15px; }
         .rec-info h4 { color: white; margin-bottom: 5px; font-size: 1.1rem; }
         .rec-info p { color: var(--text-muted); font-size: 0.85rem; }
-
-        /* Massive SEO Article Box */
-        .seo-paragraph { background: rgba(30, 41, 59, 0.4); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 50px; text-align: left; }
-        .seo-paragraph h2 { font-size: 1.8rem; margin-bottom: 20px; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
-        .seo-paragraph h3 { font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; color: #f87171; }
-        .seo-paragraph p { color: #94a3b8; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
-        .seo-paragraph strong { color: white; }
-        .seo-paragraph ul { margin-bottom: 15px; padding-left: 20px; color: #94a3b8; font-size: 1.05rem; }
-        .seo-paragraph li { margin-bottom: 10px; }
 
         footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 20px; text-align: center; background: #080c17; margin-top: auto; }
         .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 20px; }
@@ -148,6 +158,7 @@
             nav { flex-direction: column; padding: 15px; gap: 15px; }
             .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
             .seo-paragraph { padding: 25px; }
+            .wallpaper-layout { padding: 20px; }
         }
     </style>
 </head>
@@ -167,12 +178,70 @@
 
     <main class="container">
         
-        <div class="wallpaper-layout">
+        <div class="page-header">
+            <h1>3D Rubik's Cube PC Live Wallpaper</h1>
+            <a href="#download-zone" class="btn-scroll">Scroll Down to Download ↓</a>
+        </div>
+
+        <article class="seo-paragraph">
+            <h2>Interactive 3D Rubik's Cube Live Wallpaper for Low-End PCs</h2>
+            <p>
+                Take your desktop customization to an entirely new level with the <strong>3D Rubik's Cube .aww Live Wallpaper</strong> by BSR Studios. This isn't just a simple looping video playing in the background; it is a fully rendered, high-fidelity 3D model that actively responds to your mouse inputs. As you move your cursor across the screen, the Rubik's cube dynamically rotates in real-time, giving your PC a truly premium, interactive, and aesthetic feel. It is the perfect minimal background for gamers, students, and developers.
+            </p>
+            
+            <h3>The Problem with Mainstream 3D Wallpapers</h3>
+            <p>
+                If you have ever tried running an interactive 3D desktop background on an older laptop or a budget PC, you know exactly what happens: the fans spin up, the laptop gets hot, and your entire system becomes sluggish. This is because traditional live wallpaper engines often rely on embedded web browsers (like Chromium) or heavy game engines (like Unity) to render the 3D objects. This requires massive amounts of processing power, often consuming up to 15% of your CPU just to display a simple shape on your screen.
+            </p>
+
+            <p>
+                How does our Rubik's Cube run so smoothly? The secret lies in our custom-built <strong>C++ and native OpenGL engine</strong>. By ditching the heavy web frameworks, the AnyWebWall engine communicates directly with your graphics card. It handles the complex geometry and shading of this 3D Rubik's Cube with an astonishing <strong>0% CPU usage</strong> and only requires a tiny 20 to 25 MB of RAM to operate. 
+            </p>
+            <p>
+                This makes it the absolute best choice for gamers and users with 2GB or 4GB of RAM who want a cool, interactive desktop without experiencing any in-game FPS drops or system slowdowns while multitasking. 
+            </p>
+        </article>
+
+        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 30px auto; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <article class="seo-paragraph">
+            <h2>How to Get an Interactive 3D Rubik's Cube on Your Desktop</h2>
+            <p>
+                Many users want to know <strong>how to make their desktop interactive</strong> with moving 3D objects without sacrificing system performance. It is extremely simple to set up this high-quality 3D geometry desktop by following these quick steps:
+            </p>
+
+            <h3>Step 1: Download the Zero-Lag Engine</h3>
+            <p>
+                To render real 3D objects instead of video files, you must use our proprietary <strong>AnyWebWall Engine</strong> (link located in the download box below). It is entirely free and uses hardware acceleration to ensure zero lag.
+            </p>
+
+            <h3>Step 2: Get the Rubik's Cube Script</h3>
+            <p>
+                Scroll down and download the <strong>Rubik's Cube .aww file</strong>. This file contains the 3D model data, shadows, colors, and math logic required for it to follow your cursor on the screen.
+            </p>
+
+            <h3>Step 3: Apply and Interact</h3>
+            <p>
+                Open the AnyWebWall application, click "Add Wallpaper", and load the script you just downloaded. Because this is a native script, you can dive into the real-time customization menu by right-clicking the AnyWebWall icon in your taskbar. You can manually adjust the size, scale, background color, and rotation speed of the cube according to your personal preference!
+            </p>
+        </article>
+
+        <div id="download-zone" class="wallpaper-layout">
             
             <div class="main-gif-card">
                 <img src="https://github.com/AryanMewada/AWW/raw/main/Rubiks%20Cube.gif" alt="3D Rubik's Cube Live Wallpaper Preview">
                 <div class="main-gif-info">
-                    <h1>3D Rubik's Cube</h1>
+                    <h2>3D Rubik's Cube</h2>
                     <p>Interactive 3D Model</p>
                 </div>
             </div>
@@ -186,7 +255,10 @@
                     <li><strong>Features:</strong> 3D Mouse Interaction</li>
                 </ul>
                 
-                <a href="https://github.com/AryanMewada/AWW/raw/main/Rubiks%20Cube.aww" class="btn-download">Download .aww File</a>
+                <div class="download-container">
+                    <a href="https://github.com/AryanMewada/AWW/raw/main/Rubiks%20Cube.aww" id="downloadBtn" class="btn-download">Download .aww File</a>
+                    <p class="download-stats">Total Downloads: <span id="downloadCount">...</span></p>
+                </div>
                 
                 <div class="engine-info">
                     <strong>ℹ️ How to use this file?</strong>
@@ -236,63 +308,6 @@
             </div>
         </section>
 
-        <article class="seo-paragraph">
-            <h2>Interactive 3D Rubik's Cube Live Wallpaper for Low-End PCs</h2>
-            <p>
-                Take your desktop customization to an entirely new level with the <strong>3D Rubik's Cube .aww Live Wallpaper</strong> by BSR Studios. This isn't just a simple looping video playing in the background; it is a fully rendered, high-fidelity 3D model that actively responds to your mouse inputs. As you move your cursor across the screen, the Rubik's cube dynamically rotates in real-time, giving your PC a truly premium, interactive, and aesthetic feel. It is the perfect minimal background for gamers, students, and developers.
-            </p>
-            
-            <h3>The Problem with Mainstream 3D Wallpapers</h3>
-            <p>
-                If you have ever tried running an interactive 3D desktop background on an older laptop or a budget PC, you know exactly what happens: the fans spin up, the laptop gets hot, and your entire system becomes sluggish. This is because traditional live wallpaper engines often rely on embedded web browsers (like Chromium) or heavy game engines (like Unity) to render the 3D objects. This requires massive amounts of processing power, often consuming up to 15% of your CPU just to display a simple shape on your screen.
-            </p>
-
-            <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 30px auto; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
-                <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-1032421976701438"
-                     data-ad-slot="5645597669"
-                     data-ad-format="horizontal"
-                     data-full-width-responsive="true"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-
-            <h3>The AnyWebWall C++ & OpenGL Advantage</h3>
-            <p>
-                How does our Rubik's Cube run so smoothly? The secret lies in our custom-built <strong>C++ and native OpenGL engine</strong>. By ditching the heavy web frameworks, the AnyWebWall engine communicates directly with your graphics card. It handles the complex geometry and shading of this 3D Rubik's Cube with an astonishing <strong>0% CPU usage</strong> and only requires a tiny 20 to 25 MB of RAM to operate. 
-            </p>
-            <p>
-                This makes it the absolute best choice for gamers and users with 2GB or 4GB of RAM who want a cool, interactive desktop without experiencing any in-game FPS drops or system slowdowns while multitasking. 
-            </p>
-
-            <h3>How to Install and Customize</h3>
-            <p>
-                Applying this 3D model to your screen is fast and easy. 
-            </p>
-            <ul>
-                <li>First, download the lightweight <strong>.aww file</strong> from the link above.</li>
-                <li>Ensure you have the free <strong>AnyWebWall Engine</strong> installed on your PC.</li>
-                <li>Launch the engine, select "Add Wallpaper", and load the Rubik's Cube file.</li>
-            </ul>
-            <p>
-                Because this is a native script, you can dive into the real-time customization menu by right-clicking the AnyWebWall icon in your taskbar. You can manually adjust the size, scale, background color, and rotation speed of the cube according to your personal preference. Download the 3D Rubik's Cube live wallpaper today and bring your static desktop to life!
-            </p>
-        </article>
-
-        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 0 auto 50px; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
-            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-1032421976701438"
-                 data-ad-slot="5645597669"
-                 data-ad-format="horizontal"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
     </main>
 
     <footer>
@@ -301,9 +316,48 @@
             <a href="../contact.html">Contact Us</a>
             <a href="../privacy-policy.html">Privacy Policy</a>
             <a href="../terms.html">Terms & Conditions</a>
+            <a href="../disclaimer.html">Disclaimer</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../dmca.html">DMCA Policy</a>
         </div>
-        <p class="copyright">© 2026 BSR Studios. All rights reserved. Designed for absolute performance.</p>
+        <p class="copyright">© 2026 BSR Studios. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const apiBase = "https://bsr-aww-tracker.aryanmewadastudios.workers.dev";
+            const fileId = "rubiks_cube"; // Specific ID for Rubik's Cube
+            const countDisplay = document.getElementById("downloadCount");
+            const downloadBtn = document.getElementById("downloadBtn");
+
+            // 1. Fetch current count on page load
+            fetch(`${apiBase}/count/${fileId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.downloads !== undefined) {
+                        countDisplay.innerText = data.downloads;
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching download count:", error);
+                    countDisplay.innerText = "N/A";
+                });
+
+            // 2. Increase count when button is clicked
+            downloadBtn.addEventListener("click", () => {
+                fetch(`${apiBase}/download/${fileId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Immediately update the visual count upon a successful click
+                        if (data.success && data.downloads) {
+                            countDisplay.innerText = data.downloads;
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error updating download count:", error);
+                    });
+            });
+        });
+    </script>
 </body>
 </html>

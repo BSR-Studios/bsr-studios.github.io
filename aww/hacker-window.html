@@ -8,9 +8,9 @@
 
     <title>Hacker Window Live Wallpaper | AnyWebWall Theme by BSR Studios</title>
     
-    <meta name="description" content="Download the Hacker Window live wallpaper for PC. Transform your desktop into a cyberpunk hacker interface with 0% CPU usage. Perfect for low-end 2GB systems.">
+    <meta name="description" content="Download the Hacker Window live wallpaper for PC. Transform your desktop into a cyberpunk hacker interface with 0% CPU usage. Perfect for low-end 2GB systems. Learn how to make your PC look like a hacker setup.">
     
-    <meta name="keywords" content="Hacker Window Live Wallpaper, cyberpunk desktop theme, hacker pc background, make pc look like hacker, terminal live wallpaper, coding animated background, AnyWebWall hacker theme, download .aww files, interactive hacker desktop, 0% cpu live wallpaper, zero lag pc background, matrix style wallpaper, sci-fi desktop theme, hacker screen simulator, best wallpaper engine alternative, low end pc live wallpaper, 2gb ram pc themes, c++ live wallpaper, opengl desktop background, custom aww files, zero resource usage desktop, aesthetic hacker setup, tech geek background, programmer live wallpaper, cyber security wallpaper, motion backgrounds free, bsr apps, bsr studios, cool pc screensavers, windows 10 hacker theme, windows 11 cyberpunk background, animated desktop free, motion wallpaper, custom windows UI, low resource background player, hardware accelerated wallpaper, free windows themes, live backgrounds for low end pc, retro hacker background, computer terminal wallpaper, zero lag gaming background, dark web aesthetic wallpaper, linux terminal windows theme, code raining background, minimalist tech setup, green text black background, hacker simulator ui, custom interactive pc themes, tech enthusiast wallpaper, free developer backgrounds, 4k hacker wallpaper pc, 1080p tech screensaver">
+    <meta name="keywords" content="how to make pc look like hacker, how to get hacker live wallpaper, how to set animated background windows 10, how to customize windows 11, Hacker Window Live Wallpaper, cyberpunk desktop theme, hacker pc background, terminal live wallpaper, coding animated background, AnyWebWall hacker theme, download .aww files, interactive hacker desktop, 0% cpu live wallpaper, zero lag pc background, matrix style wallpaper, sci-fi desktop theme, hacker screen simulator, best wallpaper engine alternative, low end pc live wallpaper, 2gb ram pc themes, c++ live wallpaper, opengl desktop background, custom aww files, zero resource usage desktop, aesthetic hacker setup, tech geek background, programmer live wallpaper, cyber security wallpaper, motion backgrounds free, bsr apps, bsr studios, cool pc screensavers, windows 10 hacker theme, windows 11 cyberpunk background, free windows themes, live backgrounds for low end pc, retro hacker background, computer terminal wallpaper, code raining background, minimalist tech setup, green text black background, hacker simulator ui, custom interactive pc themes, tech enthusiast wallpaper, free developer backgrounds, 4k hacker wallpaper pc, 1080p tech screensaver, how to make desktop look cool, how to optimize pc for live wallpaper">
     
     <meta name="author" content="BSR Studios">
     <meta name="robots" content="index, follow">
@@ -50,7 +50,7 @@
     <style>
         /* Hacker Green Color Theme */
         :root { --bg: #0b1120; --surface: #1e293b; --primary: #10b981; --primary-hover: #059669; --text-main: #ffffff; --text-muted: #94a3b8; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; display: flex; flex-direction: column; min-height: 100vh; }
 
         /* NAV BAR */
@@ -73,10 +73,26 @@
 
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; flex: 1; }
 
-        /* LAYOUT */
+        /* HEADER / SCROLL BUTTON */
+        .page-header { text-align: center; margin-bottom: 40px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .page-header h1 { font-size: 2.2rem; color: white; margin-bottom: 15px; }
+        .btn-scroll { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: var(--primary); border: 2px solid var(--primary); font-size: 1rem; font-weight: 700; padding: 12px 30px; border-radius: 100px; text-decoration: none; transition: 0.3s; }
+        .btn-scroll:hover { background: rgba(16, 185, 129, 0.1); transform: translateY(-3px); }
+
+        /* Massive SEO Article Box */
+        .seo-paragraph { background: rgba(30, 41, 59, 0.4); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 40px; text-align: left; }
+        .seo-paragraph h2 { font-size: 1.8rem; margin-bottom: 20px; color: white; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        .seo-paragraph h3 { font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; color: #34d399; }
+        .seo-paragraph p { color: #94a3b8; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
+        .seo-paragraph strong { color: white; }
+        .seo-paragraph ul, .seo-paragraph ol { margin-bottom: 15px; padding-left: 20px; color: #94a3b8; font-size: 1.05rem; }
+        .seo-paragraph li { margin-bottom: 10px; }
+
+        /* LAYOUT (Moved Down) */
         .wallpaper-layout { 
-            display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 50px; 
+            display: flex; flex-wrap: wrap; gap: 40px; margin-top: 50px; margin-bottom: 50px; 
             align-items: flex-start; justify-content: center;
+            background: rgba(30, 41, 59, 0.2); padding: 40px; border-radius: 20px; border: 1px solid var(--primary);
         }
         
         /* PERFECT GALLERY STYLE CARD */
@@ -95,8 +111,8 @@
             display: block; 
             border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
         }
-        .main-gif-info { padding: 20px; }
-        .main-gif-info h1 { font-size: 1.4rem; font-weight: 700; color: white; margin-bottom: 5px; line-height: 1.2; }
+        .main-gif-info { padding: 20px; text-align: center; }
+        .main-gif-info h2 { font-size: 1.4rem; font-weight: 700; color: white; margin-bottom: 5px; line-height: 1.2; }
         .main-gif-info p { color: var(--primary); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
         
         /* WALLPAPER DETAILS (Right Side) */
@@ -107,11 +123,14 @@
         .specs-list li:last-child { margin-bottom: 0; }
         .specs-list li strong { color: white; }
 
-        .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 18px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); text-align: center; }
+        .download-container { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 20px; }
+        .btn-download { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; font-size: 1.2rem; font-weight: 700; padding: 18px 40px; border-radius: 100px; text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); text-align: center; width: 100%; max-width: 300px;}
         .btn-download:hover { background: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4); }
+        .download-stats { font-size: 0.95rem; color: var(--text-muted); font-weight: 500; }
+        .download-stats span { color: var(--primary); font-weight: 700; }
 
         .engine-info { 
-            margin-top: 25px; padding: 16px 20px; border-radius: 12px; 
+            padding: 16px 20px; border-radius: 12px; 
             background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); 
             color: #e2e8f0; font-size: 0.95rem; line-height: 1.5;
         }
@@ -120,7 +139,7 @@
         .engine-info a:hover { background: #059669; }
 
         .recommended-section { margin-bottom: 50px; }
-        .recommended-section h3 { font-size: 1.5rem; margin-bottom: 25px; border-left: 4px solid var(--primary); padding-left: 15px; }
+        .recommended-section h3 { font-size: 1.5rem; margin-bottom: 25px; border-left: 4px solid var(--primary); padding-left: 15px; color: white; }
         .rec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
         .rec-card { background: var(--surface); border-radius: 16px; overflow: hidden; text-decoration: none; transition: transform 0.3s; border: 1px solid rgba(255,255,255,0.05); }
         .rec-card:hover { transform: translateY(-5px); border-color: var(--primary); }
@@ -129,16 +148,9 @@
         .rec-info h4 { color: white; margin-bottom: 5px; font-size: 1.1rem; }
         .rec-info p { color: var(--text-muted); font-size: 0.85rem; }
 
-        /* Massive SEO Article Box */
-        .seo-paragraph { background: rgba(30, 41, 59, 0.4); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 50px; text-align: left; }
-        .seo-paragraph h2 { font-size: 1.8rem; margin-bottom: 20px; color: white; }
-        .seo-paragraph h3 { font-size: 1.3rem; margin-top: 25px; margin-bottom: 15px; color: #34d399; }
-        .seo-paragraph p { color: #94a3b8; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.8; }
-        .seo-paragraph strong { color: white; }
-
         footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 20px; text-align: center; background: #080c17; margin-top: auto; }
         .footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 20px; }
-        .footer-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .footer-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; transition: 0.3s; }
         .footer-nav a:hover { color: var(--primary); }
         .copyright { color: rgba(255, 255, 255, 0.2); font-size: 0.85rem; }
 
@@ -146,6 +158,7 @@
             nav { flex-direction: column; padding: 15px; gap: 15px; }
             .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; }
             .seo-paragraph { padding: 25px; }
+            .wallpaper-layout { padding: 20px; }
         }
     </style>
 </head>
@@ -165,12 +178,84 @@
 
     <main class="container">
         
-        <div class="wallpaper-layout">
+        <div class="page-header">
+            <h1>Hacker Window PC Live Wallpaper</h1>
+            <a href="#download-zone" class="btn-scroll">Scroll Down to Download ↓</a>
+        </div>
+
+        <article class="seo-paragraph">
+            <h2>Make Your PC Look Like a True Hacker Terminal</h2>
+            <p>
+                Want to give your standard Windows desktop the ultimate cyberpunk and developer aesthetic? The <strong>Hacker Window Live Wallpaper</strong> is designed to transform your plain background into a highly advanced, retro-futuristic terminal interface. This exclusive <strong>.aww format file</strong> renders a visually stunning, looping hacker command-line screen directly on your desktop layer. It makes your PC look like it belongs in a high-tech sci-fi movie, making it absolutely perfect for programmers, cyber-security students, and tech enthusiasts.
+            </p>
+            
+            <h3>Built for Extreme Performance</h3>
+            <p>
+                A major problem with traditional live wallpaper software is that running complex text-based animations requires heavy web processing. This eats up your CPU cycles and causes severe frame drops when you try to multitask. We solved this problem by eliminating web browsers entirely.
+            </p>
+            <p>
+                Our Hacker Window theme is entirely script-driven and powered by the <strong>AnyWebWall native C++ and OpenGL engine</strong>. This means the animation is hardware-accelerated directly by your graphics card. It runs flawlessly with an incredible <strong>0% CPU usage</strong> and strictly consumes under 20MB of RAM. You can keep this awesome hacker background running permanently while you play heavy games like Valorant or code complex projects on a low-end 2GB/4GB RAM PC, without experiencing a single lag spike.
+            </p>
+        </article>
+
+        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 30px auto; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
+            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1032421976701438"
+                 data-ad-slot="5645597669"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <article class="seo-paragraph">
+            <h2>How to Make Your PC Look Like a Hacker Setup</h2>
+            <p>
+                A lot of users search for ways to customize their dull computer screens into something that looks like it belongs to a cyber-security expert or a movie hacker. Achieving this aesthetic is actually quite simple and doesn't require any dangerous software. Here is a step-by-step guide on <strong>how to make your PC look like a hacker setup</strong> easily on Windows 10 and 11.
+            </p>
+
+            <h3>Step 1: Install a Hacker Live Wallpaper</h3>
+            <p>
+                The most important part of any tech setup is the background. Static images are boring. By using the <strong>Hacker Window .aww file</strong> available on this page, you get moving code, scrolling text, and digital terminal interfaces running behind your icons. 
+            </p>
+            <ol>
+                <li>Download the free <a href="../apps/AnyWebWall.html" style="color: #34d399;">AnyWebWall Engine</a>.</li>
+                <li>Download the Hacker Window theme from the download section below.</li>
+                <li>Launch AnyWebWall, click "Add Wallpaper", and select your downloaded file.</li>
+            </ol>
+
+            <h3>Step 2: Hide Your Desktop Icons</h3>
+            <p>
+                Real hackers don't have cluttered desktops filled with game shortcuts and folders. To get a clean look:
+            </p>
+            <ul>
+                <li>Right-click anywhere on your empty desktop.</li>
+                <li>Hover over <strong>View</strong>.</li>
+                <li>Uncheck <strong>Show desktop icons</strong>.</li>
+            </ul>
+            <p>Don't worry, your files are not deleted. You can still access them through the File Explorer, and your screen will now show the uninterrupted hacker animation!</p>
+
+            <h3>Step 3: Auto-Hide the Taskbar and Use Dark Mode</h3>
+            <p>
+                To complete the immersive cyberpunk aesthetic, you should enable Windows Dark Mode and hide your taskbar so the code animation covers the entire screen edge-to-edge.
+            </p>
+            <ul>
+                <li>Go to Windows Settings > Personalization > Colors and set your default app mode to <strong>Dark</strong>.</li>
+                <li>Go to Settings > Personalization > Taskbar and turn on <strong>Automatically hide the taskbar in desktop mode</strong>.</li>
+            </ul>
+            <p>
+                With these simple steps, combined with our 0% CPU AnyWebWall engine, you will have the ultimate, lag-free hacker computer setup that will amaze anyone who sees your screen!
+            </p>
+        </article>
+
+        <div id="download-zone" class="wallpaper-layout">
             
             <div class="main-gif-card">
                 <img src="https://github.com/AryanMewada/AWW/raw/main/Hacker%20Window.gif" alt="Hacker Window Live Wallpaper Preview">
                 <div class="main-gif-info">
-                    <h1>Hacker Window Live Wallpaper</h1>
+                    <h2>Hacker Window Live Wallpaper</h2>
                     <p>Cyberpunk / Tech Interface</p>
                 </div>
             </div>
@@ -184,11 +269,14 @@
                     <li><strong>Features:</strong> Cyberpunk Terminal Aesthetic</li>
                 </ul>
                 
-                <a href="https://github.com/AryanMewada/AWW/raw/main/Hacker%20Window.aww" class="btn-download">Download .aww File</a>
+                <div class="download-container">
+                    <a href="https://github.com/AryanMewada/AWW/raw/main/Hacker%20Window.aww" id="downloadBtn" class="btn-download">Download .aww File</a>
+                    <p class="download-stats">Total Downloads: <span id="downloadCount">...</span></p>
+                </div>
                 
                 <div class="engine-info">
-                    <strong>ℹ️ How to use this file?</strong>
-                    This is an exclusive desktop wallpaper script. To apply this to your screen, you will need our free wallpaper engine.
+                    <strong>ℹ️ Requires AnyWebWall</strong>
+                    This is an exclusive desktop wallpaper script. To apply this to your screen, you will need our free native wallpaper engine.
                     <br>
                     <a href="../apps/AnyWebWall.html">Get AnyWebWall Engine</a>
                 </div>
@@ -234,51 +322,6 @@
             </div>
         </section>
 
-        <article class="seo-paragraph">
-            <h2>Make Your PC Look Like a True Hacker Terminal</h2>
-            <p>
-                Want to give your standard Windows desktop the ultimate cyberpunk and developer aesthetic? The <strong>Hacker Window Live Wallpaper</strong> is designed to transform your plain background into a highly advanced, retro-futuristic terminal interface. This exclusive <strong>.aww format file</strong> renders a visually stunning, looping hacker command-line screen directly on your desktop layer. It makes your PC look like it belongs in a high-tech sci-fi movie, making it absolutely perfect for programmers, cyber-security students, and tech enthusiasts.
-            </p>
-            
-            <h3>Built for Extreme Performance</h3>
-            <p>
-                A major problem with traditional live wallpaper software (like Wallpaper Engine) is that running complex text-based animations requires heavy Chromium web processing. This eats up your CPU cycles and causes severe frame drops when you try to multitask. We solved this problem by eliminating web browsers entirely.
-            </p>
-
-            <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 30px auto; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
-                <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-1032421976701438"
-                     data-ad-slot="5645597669"
-                     data-ad-format="horizontal"
-                     data-full-width-responsive="true"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-
-            <p>
-                Our Hacker Window theme is entirely script-driven and powered by the <strong>AnyWebWall native C++ and OpenGL engine</strong>. This means the animation is hardware-accelerated directly by your graphics card. It runs flawlessly with an incredible <strong>0% CPU usage</strong> and strictly consumes under 20MB of RAM. You can keep this awesome hacker background running permanently while you play heavy games like Valorant or code complex projects on a low-end 2GB/4GB RAM PC, without experiencing a single lag spike.
-            </p>
-            
-            <h3>Easy Installation</h3>
-            <p>
-                To install this futuristic tech background, you don't need any coding knowledge. Simply download the highly compressed <strong>.aww script file</strong> from the link above and launch it using the free AnyWebWall engine. The software runs silently in the system tray and features an auto-pause mode when you launch full-screen games. Upgrade your desktop today and get that authentic cyberpunk hacker look with absolute zero lag!
-            </p>
-        </article>
-
-        <div class="bsr-horizontal-ad" style="width: 100%; max-width: 800px; margin: 0 auto 50px; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px;">
-            <span style="font-size: 10px; color: #94a3b8; display: block; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</span>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1032421976701438" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-1032421976701438"
-                 data-ad-slot="5645597669"
-                 data-ad-format="horizontal"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
     </main>
 
     <footer>
@@ -287,9 +330,48 @@
             <a href="../contact.html">Contact Us</a>
             <a href="../privacy-policy.html">Privacy Policy</a>
             <a href="../terms.html">Terms & Conditions</a>
+            <a href="../disclaimer.html">Disclaimer</a>
+            <a href="../faq.html">FAQ</a>
+            <a href="../dmca.html">DMCA Policy</a>
         </div>
-        <p class="copyright">© 2026 BSR Studios. All rights reserved. Designed for absolute performance.</p>
+        <p class="copyright">© 2026 BSR Studios. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const apiBase = "https://bsr-aww-tracker.aryanmewadastudios.workers.dev";
+            const fileId = "hacker_window"; // Specific ID for Hacker Window
+            const countDisplay = document.getElementById("downloadCount");
+            const downloadBtn = document.getElementById("downloadBtn");
+
+            // 1. Fetch current count on page load
+            fetch(`${apiBase}/count/${fileId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.downloads !== undefined) {
+                        countDisplay.innerText = data.downloads;
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching download count:", error);
+                    countDisplay.innerText = "N/A";
+                });
+
+            // 2. Increase count when button is clicked
+            downloadBtn.addEventListener("click", () => {
+                fetch(`${apiBase}/download/${fileId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Immediately update the visual count upon a successful click
+                        if (data.success && data.downloads) {
+                            countDisplay.innerText = data.downloads;
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error updating download count:", error);
+                    });
+            });
+        });
+    </script>
 </body>
 </html>
