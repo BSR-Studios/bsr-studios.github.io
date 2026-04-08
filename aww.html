@@ -79,7 +79,13 @@
         .wall-thumb { width: 100%; height: 200px; background-color: #0b1120; object-fit: cover; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .wall-info { padding: 25px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
         .wall-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; color: white;}
-        .wall-type { font-size: 0.85rem; color: #a78bfa; font-weight: 600; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        /* Updates for Download Count Layout */
+        .info-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .wall-type { font-size: 0.85rem; color: #a78bfa; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
+        .dl-badge { font-size: 0.8rem; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 12px; font-weight: 600; }
+        .dl-badge span { color: white; }
+        .dl-badge svg { color: var(--primary); }
 
         .btn-download { display: block; width: 100%; padding: 12px 0; background: rgba(255, 255, 255, 0.05); color: white; text-align: center; border-radius: 12px; font-weight: 600; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.1); }
         .wall-card:hover .btn-download { background: var(--primary); border-color: var(--primary); }
@@ -134,7 +140,13 @@
             <div class="wall-info">
                 <div>
                     <h2 class="wall-title">Hacker Window</h2>
-                    <span class="wall-type">Cyberpunk / Tech</span>
+                    <div class="info-header">
+                        <span class="wall-type">Cyberpunk / Tech</span>
+                        <div class="dl-badge" data-id="hacker_window">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count">...</span>
+                        </div>
+                    </div>
                 </div>
                 <span class="btn-download">View Details</span>
             </div>
@@ -145,7 +157,13 @@
             <div class="wall-info">
                 <div>
                     <h2 class="wall-title">Matrix Digital Rain</h2>
-                    <span class="wall-type">Code / Animation</span>
+                    <div class="info-header">
+                        <span class="wall-type">Code / Animation</span>
+                        <div class="dl-badge" data-id="matrix_rain">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count">...</span>
+                        </div>
+                    </div>
                 </div>
                 <span class="btn-download">View Details</span>
             </div>
@@ -156,7 +174,13 @@
             <div class="wall-info">
                 <div>
                     <h2 class="wall-title">Radar Scanner</h2>
-                    <span class="wall-type">Tech / Interface</span>
+                    <div class="info-header">
+                        <span class="wall-type">Tech / Interface</span>
+                        <div class="dl-badge" data-id="radar_scanner">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count">...</span>
+                        </div>
+                    </div>
                 </div>
                 <span class="btn-download">View Details</span>
             </div>
@@ -167,7 +191,13 @@
             <div class="wall-info">
                 <div>
                     <h2 class="wall-title">3D Rubik's Cube</h2>
-                    <span class="wall-type">3D / Interactive</span>
+                    <div class="info-header">
+                        <span class="wall-type">3D / Interactive</span>
+                        <div class="dl-badge" data-id="rubiks_cube">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count">...</span>
+                        </div>
+                    </div>
                 </div>
                 <span class="btn-download">View Details</span>
             </div>
@@ -178,7 +208,13 @@
             <div class="wall-info">
                 <div>
                     <h2 class="wall-title">Cursor Trail</h2>
-                    <span class="wall-type">Interactive / Mouse</span>
+                    <div class="info-header">
+                        <span class="wall-type">Interactive / Mouse</span>
+                        <div class="dl-badge" data-id="cursor_trail">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count">...</span>
+                        </div>
+                    </div>
                 </div>
                 <span class="btn-download">View Details</span>
             </div>
@@ -189,7 +225,13 @@
             <div class="wall-info">
                 <div>
                     <h2 class="wall-title">Steav</h2>
-                    <span class="wall-type">Character / Animation</span>
+                    <div class="info-header">
+                        <span class="wall-type">Character / Animation</span>
+                        <div class="dl-badge" data-id="steav">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count">...</span>
+                        </div>
+                    </div>
                 </div>
                 <span class="btn-download">View Details</span>
             </div>
@@ -200,7 +242,13 @@
             <div class="wall-info">
                 <div>
                     <h2 class="wall-title">3D Interactive Earth</h2>
-                    <span class="wall-type">Planet / 3D Model</span>
+                    <div class="info-header">
+                        <span class="wall-type">Planet / 3D Model</span>
+                        <div class="dl-badge" data-id="earth">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            <span class="count">...</span>
+                        </div>
+                    </div>
                 </div>
                 <span class="btn-download">View Details</span>
             </div>
@@ -255,5 +303,29 @@
         <p class="copyright">© 2026 BSR Studios. All rights reserved. Designed for zero-lag aesthetics.</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const apiBase = "https://bsr-aww-tracker.aryanmewadastudios.workers.dev";
+            const badges = document.querySelectorAll(".dl-badge");
+
+            badges.forEach(badge => {
+                const fileId = badge.getAttribute("data-id");
+                const countSpan = badge.querySelector(".count");
+
+                // Fetching the count dynamically for each file card
+                fetch(`${apiBase}/count/${fileId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.downloads !== undefined) {
+                            countSpan.innerText = data.downloads;
+                        }
+                    })
+                    .catch(error => {
+                        console.error(`Error fetching count for ${fileId}:`, error);
+                        countSpan.innerText = "N/A";
+                    });
+            });
+        });
+    </script>
 </body>
 </html>
